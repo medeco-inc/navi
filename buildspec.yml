@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+    build:
+        on-failure: ABORT
+        commands:
+            - echo Nothing to do in build phase.
+    post_build:
+        commands:
+            - echo Deploying ...
+            - >-
+              aws s3 sync . s3://${BUCKET_NAME}/
+              --exclude ".github"
+              --exclude ".gitignore"
+              --exclude "README.md"
+              --exact-timestamps
+              --delete
