@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -20,7 +23,7 @@ jobs:
         with:
           aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region:            ${{ secrets.AWS_REGION }}
+          aws-region:            ${{ secrets.AWS_REGION || 'ap-northeast-1' }}
 
       - name: Sync files to S3
         run: |
@@ -29,6 +32,7 @@ jobs:
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "*.md" \
+            --exclude ".gitignore" \
             --cache-control "public, max-age=86400" \
             --metadata-directive REPLACE
 
