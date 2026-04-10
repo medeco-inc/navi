@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="頭痛 — 症状の説明・考えられる疾患・受診の目安。Medeco Navi。">
+  <title>頭痛 — 症状詳細 | Medeco Navi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <style>
+    .toc-item.is-active a { color: var(--color-primary); background: var(--color-primary-light); font-weight: var(--font-medium); }
+    #scroll-top-btn {
+      position: fixed; bottom: var(--space-6); right: var(--space-6);
+      width: 48px; height: 48px; background: var(--color-primary); color: #fff;
+      border-radius: var(--radius-full); display: flex; align-items: center;
+      justify-content: center; box-shadow: var(--shadow-lg); border: none; cursor: pointer;
+      opacity: 0; visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+      z-index: var(--z-sticky);
+    }
+    #scroll-top-btn.is-visible { opacity: 1; visibility: visible; }
+    #scroll-top-btn:hover { background: var(--color-primary-hover); }
+  </style>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+
+<!-- 検索オーバーレイ -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1">
+        <input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力">
+        <span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      </div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- ヘッダー -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../../index.html" class="header-logo" aria-label="Medeco Navi トップページ">
+        <span class="header-logo-text">Medeco <span>Navi</span></span>
+      </a>
+      <nav class="header-nav" aria-label="グローバルナビゲーション">
+        <a href="../../diseases/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる
+        </a>
+        <a href="../../symptoms/index.html" class="header-nav-item is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>症状から調べる
+        </a>
+        <a href="../../treatments/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>治療法から調べる
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-search-btn" data-search-open aria-label="検索を開く"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- モバイルメニュー -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span>
+    <button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="../../diseases/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../../symptoms/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../../treatments/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- 緊急バナー（常時表示） -->
+  <div class="emergency-banner" role="alert">
+    <strong>⚠️ 症状が重篤・急激に悪化している場合は、直ちに救急（119番）へ。</strong>
+    このサイトは医療診断ではありません。
+  </div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item"><a href="../../symptoms/index.html">症状から調べる</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">頭痛</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="badge badge-info">頭部</span>
+        <span class="badge badge-neutral">痛み</span>
+        <div class="urgency-indicator urgency-medium" style="margin-left:var(--space-2);">
+          <span class="urgency-dot"></span>
+          <span>注意が必要</span>
+        </div>
+      </div>
+
+      <h1 class="page-hero-title">頭痛</h1>
+      <p class="page-hero-description">
+        頭部に感じる痛みや圧迫感。緊張型頭痛・片頭痛・群発頭痛など様々な種類があります。
+        多くの頭痛は市販薬で対応可能ですが、「今まで経験したことのない激しい頭痛」は緊急受診が必要です。
+      </p>
+
+      <!-- 注意書き -->
+      <div class="alert alert-warning" style="margin-top:var(--space-5);max-width:720px;" role="note">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>
+          <strong>このページの情報について：</strong>
+          掲載内容はAIによる診断ではなく、一般的な医療情報の提供が目的です。
+          実際の診断・治療は必ず医師が行います。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- コンテンツ -->
+  <div class="container">
+    <div class="detail-layout">
+
+      <article class="detail-main">
+
+        <!-- 目次 -->
+        <nav class="toc" aria-label="このページの目次">
+          <p class="toc-title">目次</p>
+          <ol class="toc-list">
+            <li class="toc-item"><a href="#description">症状の説明</a></li>
+            <li class="toc-item"><a href="#red-flags">すぐに受診すべき場合</a></li>
+            <li class="toc-item"><a href="#related-diseases">考えられる主な疾患</a></li>
+            <li class="toc-item"><a href="#self-care">セルフケア・応急処置</a></li>
+            <li class="toc-item"><a href="#when-to-visit">受診の目安</a></li>
+            <li class="toc-item"><a href="#related-symptoms">関連症状</a></li>
+          </ol>
+        </nav>
+
+        <!-- 症状の説明 -->
+        <section class="detail-section" id="description" aria-labelledby="desc-title">
+          <h2 class="detail-section-title" id="desc-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            症状の説明
+          </h2>
+          <p>
+            頭痛とは、頭部のいずれかの部分に感じる痛みや不快感の総称です。その性質・部位・随伴症状によって種類が異なり、それぞれ原因も異なります。
+          </p>
+
+          <h3 style="margin-top:var(--space-6);margin-bottom:var(--space-3);font-size:var(--text-lg);">頭痛の主な種類</h3>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);">
+              <strong>緊張型頭痛</strong>
+              <span class="badge badge-neutral" style="margin-left:var(--space-2);">最多</span>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-2);">
+                頭全体が締め付けられるような鈍い痛み。長時間のデスクワーク・姿勢不良・ストレスが主な原因。市販の鎮痛薬が有効なことが多い。
+              </p>
+            </div>
+            <div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);">
+              <strong>片頭痛（偏頭痛）</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-2);">
+                片側（まれに両側）のズキズキする拍動性の強い頭痛。光・音・においに過敏になり、吐き気を伴うことが多い。前兆（閃輝暗点）が現れる場合もある。
+              </p>
+            </div>
+            <div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);">
+              <strong>群発頭痛</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-2);">
+                目の奥をえぐるような激烈な痛みが一側に集中して起こる。涙・鼻水を伴うことが多く、毎日同じ時間に発作が起きる特徴がある。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- すぐに受診すべき場合 -->
+        <section class="detail-section" id="red-flags" aria-labelledby="red-title">
+          <h2 class="detail-section-title" id="red-title" style="color:var(--color-danger);">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-danger);" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            こんな場合はすぐに救急へ
+          </h2>
+
+          <div class="alert alert-danger" role="alert">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+            <div>
+              <strong>以下に当てはまる場合は今すぐ119番へ連絡してください</strong>
+            </div>
+          </div>
+
+          <ul style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);">
+            <li style="display:flex;gap:var(--space-3);padding:var(--space-4);background:#FEF2F2;border-radius:var(--radius-lg);border-left:4px solid var(--color-danger);">
+              <span style="color:var(--color-danger);font-size:20px;" aria-hidden="true">🚨</span>
+              <div><strong>今まで経験したことのない激しい頭痛（雷鳴頭痛）</strong><br><span style="font-size:var(--text-sm);color:var(--color-text-sub);">くも膜下出血の可能性があります。</span></div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);padding:var(--space-4);background:#FEF2F2;border-radius:var(--radius-lg);border-left:4px solid var(--color-danger);">
+              <span style="color:var(--color-danger);font-size:20px;" aria-hidden="true">🚨</span>
+              <div><strong>頭痛に意識障害・混乱・嘔吐が伴う</strong><br><span style="font-size:var(--text-sm);color:var(--color-text-sub);">脳卒中・髄膜炎の可能性があります。</span></div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);padding:var(--space-4);background:#FEF2F2;border-radius:var(--radius-lg);border-left:4px solid var(--color-danger);">
+              <span style="color:var(--color-danger);font-size:20px;" aria-hidden="true">🚨</span>
+              <div><strong>高熱・首の硬直を伴う頭痛</strong><br><span style="font-size:var(--text-sm);color:var(--color-text-sub);">細菌性髄膜炎の可能性があります。</span></div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);padding:var(--space-4);background:#FEF2F2;border-radius:var(--radius-lg);border-left:4px solid var(--color-danger);">
+              <span style="color:var(--color-danger);font-size:20px;" aria-hidden="true">🚨</span>
+              <div><strong>手足の麻痺・言語障害・視野障害を伴う頭痛</strong><br><span style="font-size:var(--text-sm);color:var(--color-text-sub);">脳卒中の可能性があります。</span></div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 考えられる主な疾患 -->
+        <section class="detail-section" id="related-diseases" aria-labelledby="diseases-title">
+          <h2 class="detail-section-title" id="diseases-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            考えられる主な疾患
+          </h2>
+          <p style="margin-bottom:var(--space-5);color:var(--color-text-sub);font-size:var(--text-sm);">
+            ※ あくまでも参考情報です。実際の診断は必ず医師が行います。
+          </p>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <a href="../../diseases/migraine/index.html" style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-lg);text-decoration:none;color:inherit;transition:background var(--transition-fast);" class="card-link">
+              <span style="font-size:28px;" aria-hidden="true">🧠</span>
+              <div style="flex:1;">
+                <strong>片頭痛</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-sub);">片側の拍動性頭痛、光・音過敏、吐き気を伴うことが多い</p>
+              </div>
+              <span class="badge badge-warning">中程度</span>
+            </a>
+            <a href="../../diseases/hypertension/index.html" style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-lg);text-decoration:none;color:inherit;transition:background var(--transition-fast);" class="card-link">
+              <span style="font-size:28px;" aria-hidden="true">🫀</span>
+              <div style="flex:1;">
+                <strong>高血圧症</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-sub);">後頭部の重い頭痛、血圧が高い方に多い</p>
+              </div>
+              <span class="badge badge-neutral">慢性</span>
+            </a>
+            <div style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <span style="font-size:28px;" aria-hidden="true">🤧</span>
+              <div style="flex:1;">
+                <strong>緊張型頭痛</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-sub);">頭全体の締め付け感、最も多いタイプ。生活習慣改善で対応可能なことが多い</p>
+              </div>
+              <span class="badge badge-success">軽度</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- セルフケア -->
+        <section class="detail-section" id="self-care" aria-labelledby="selfcare-title">
+          <h2 class="detail-section-title" id="selfcare-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            セルフケア・応急処置（軽症の場合のみ）
+          </h2>
+          <div class="alert alert-warning" role="note">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+            <div>上記の「すぐに救急へ」に当てはまる場合はセルフケアを行わず、直ちに受診してください。</div>
+          </div>
+          <ul style="margin-top:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3);">
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="font-size:20px;" aria-hidden="true">😴</span>
+              <div><strong>安静・睡眠</strong>：暗くて静かな場所で横になり、休息をとる。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="font-size:20px;" aria-hidden="true">💊</span>
+              <div><strong>市販鎮痛薬</strong>：アセトアミノフェン・イブプロフェンなど。週2〜3日以上の使用は「薬物乱用頭痛」のリスクがあります。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="font-size:20px;" aria-hidden="true">🧊</span>
+              <div><strong>冷・温罨法</strong>：緊張型には温湿布（首・肩）、片頭痛には冷湿布（額・こめかみ）が効果的な場合がある。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="font-size:20px;" aria-hidden="true">💧</span>
+              <div><strong>水分補給</strong>：脱水が頭痛の原因になることがある。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="font-size:20px;" aria-hidden="true">🧘</span>
+              <div><strong>ストレス管理</strong>：緊張型頭痛の予防に、ストレスの軽減・適切な休憩が効果的。</div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 受診の目安 -->
+        <section class="detail-section" id="when-to-visit" aria-labelledby="visit-title">
+          <h2 class="detail-section-title" id="visit-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            受診の目安
+          </h2>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-danger);background:#FEF2F2;border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
+              <strong style="color:var(--color-danger);">今すぐ救急受診（119番）</strong><br>
+              <span style="font-size:var(--text-sm);">雷鳴頭痛 / 意識障害・麻痺を伴う / 発熱・首の硬直を伴う</span>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-warning);background:#FFFBEB;border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
+              <strong style="color:#B45309;">数日以内に受診を</strong><br>
+              <span style="font-size:var(--text-sm);">頭痛が1週間以上続く / 鎮痛薬が効かない / 徐々に強くなっている</span>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-success);background:#F0FDF4;border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
+              <strong style="color:var(--color-success);">様子を見ても可（改善しない場合は受診）</strong><br>
+              <span style="font-size:var(--text-sm);">軽度の緊張型頭痛 / 市販薬で改善する / 原因が明らかな場合</span>
+            </div>
+          </div>
+          <p style="margin-top:var(--space-4);font-size:var(--text-sm);color:var(--color-text-sub);">
+            受診科の目安：内科・神経内科・脳神経外科（麻痺・意識障害を伴う場合）
+          </p>
+        </section>
+
+        <!-- 関連症状 -->
+        <section id="related-symptoms" aria-labelledby="relatedsym-title">
+          <h2 class="detail-section-title" id="relatedsym-title" style="border-bottom:2px solid var(--color-primary-light);padding-bottom:var(--space-3);margin-bottom:var(--space-5);">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            関連する症状
+          </h2>
+          <div class="scroll-card-list" role="list">
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../symptoms/dizziness/index.html" class="card" style="text-decoration:none;color:inherit;">
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-2);">めまい</h3>
+                <p style="font-size:var(--text-sm);color:var(--color-text-sub);">頭痛と同時に起こることが多い</p>
+                <span class="badge badge-warning" style="margin-top:var(--space-2);">注意</span>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../symptoms/nausea/index.html" class="card" style="text-decoration:none;color:inherit;">
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-2);">吐き気・嘔吐</h3>
+                <p style="font-size:var(--text-sm);color:var(--color-text-sub);">片頭痛に多く伴う症状</p>
+                <span class="badge badge-warning" style="margin-top:var(--space-2);">注意</span>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../symptoms/sudden-headache/index.html" class="card" style="text-decoration:none;color:inherit;">
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-2);">突然の激しい頭痛</h3>
+                <p style="font-size:var(--text-sm);color:var(--color-text-sub);">要注意！緊急受診が必要</p>
+                <span class="badge badge-danger" style="margin-top:var(--space-2);">要注意</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+      <!-- サイドバー -->
+      <aside class="detail-sidebar" aria-label="関連情報">
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">緊急度の目安</p>
+          <div class="urgency-indicator urgency-medium" style="margin-bottom:var(--space-2);">
+            <span class="urgency-dot"></span><span>注意が必要</span>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);">多くは軽症ですが、突然の激しい頭痛は要緊急受診です</p>
+        </div>
+
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する疾患</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item"><a href="../../diseases/migraine/index.html"><span>🧠</span>片頭痛</a></li>
+            <li class="sidebar-list-item"><a href="../../diseases/hypertension/index.html"><span>🫀</span>高血圧症</a></li>
+            <li class="sidebar-list-item"><a href="../../diseases/stroke/index.html"><span>⚡</span>脳卒中</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する治療法</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item"><a href="../../treatments/pain-management/index.html"><span>💊</span>疼痛管理・鎮痛療法</a></li>
+            <li class="sidebar-list-item"><a href="../../treatments/migraine-treatment/index.html"><span>🧪</span>片頭痛治療</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget" style="background:var(--color-danger);color:#fff;">
+          <p style="font-weight:var(--font-bold);margin-bottom:var(--space-2);">緊急の場合</p>
+          <p style="font-size:var(--text-sm);">今まで経験したことのない激しい頭痛・麻痺・意識障害が伴う場合は</p>
+          <p style="font-size:var(--text-2xl);font-weight:var(--font-bold);margin-top:var(--space-2);">119番</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section style="padding:var(--space-12) 0;background:var(--color-bg-alt);">
+    <div class="container">
+      <div class="cta-section">
+        <p style="font-size:32px;margin-bottom:var(--space-3);" aria-hidden="true">👨‍⚕️</p>
+        <h2 class="cta-title">気になる症状は専門医に相談を</h2>
+        <p class="cta-description">
+          このページの情報は一般的な医療情報の提供が目的です。<br>
+          実際の診断・治療の判断は必ず医師にご相談ください。
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;">
+          <a href="../../symptoms/index.html" class="btn btn-outline">他の症状を調べる</a>
+          <a href="../../diseases/index.html" class="btn btn-primary">疾患を調べる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer-bar" role="note">
+    <div class="container">
+      <p>このサイトは情報提供を目的としており、医療診断の代替ではありません。重篤な症状は今すぐ救急へ。症状がある場合は必ず医療機関を受診してください。</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・ご家族のための疾患情報ポータル。</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);">運営：<a href="https://medeco.io/index.html" target="_blank" rel="noopener noreferrer" style="color:inherit;">株式会社Medeco</a></p>
+      </div>
+      <div>
+        <p class="footer-col-title">調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">疾患から調べる</a></li>
+          <li><a href="../../symptoms/index.html">症状から調べる</a></li>
+          <li><a href="../../treatments/index.html">治療法から調べる</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">症状カテゴリ</p>
+        <ul class="footer-links">
+          <li><a href="../../symptoms/index.html">頭部の症状</a></li>
+          <li><a href="../../symptoms/index.html">胸部の症状</a></li>
+          <li><a href="../../symptoms/index.html">全身の症状</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">サポート</p>
+        <ul class="footer-links">
+          <li><a href="mailto:info@medeco.io">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 株式会社Medeco. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+        <a href="mailto:info@medeco.io">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top-btn" aria-label="ページトップへ戻る">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/accessibility.js"></script>
+
+</body>
+</html>

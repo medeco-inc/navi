@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="脊髄刺激療法（SCS）— 難治性慢性疼痛に対する植込み型神経刺激デバイスの仕組み・適応・効果・リスクをわかりやすく解説。Medeco Navi。">
+  <title>脊髄刺激療法（SCS）— 治療法詳細 | Medeco Navi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <style>
+    .toc-item.is-active a { color: var(--color-primary); background: var(--color-primary-light); font-weight: var(--font-medium); }
+    #scroll-top-btn { position:fixed;bottom:var(--space-6);right:var(--space-6);width:48px;height:48px;background:var(--color-primary);color:#fff;border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);border:none;cursor:pointer;opacity:0;visibility:hidden;transition:opacity var(--transition-fast),visibility var(--transition-fast);z-index:var(--z-sticky); }
+    #scroll-top-btn.is-visible { opacity:1;visibility:visible; }
+    #scroll-top-btn:hover { background:var(--color-primary-hover); }
+    .step-number { display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--color-primary);color:#fff;border-radius:var(--radius-full);font-weight:var(--font-bold);font-size:var(--text-sm);flex-shrink:0; }
+  </style>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1"><input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力"><span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span></div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+<header class="site-header" role="banner">
+  <div class="container"><div class="header-inner">
+    <a href="../../index.html" class="header-logo" aria-label="Medeco Navi トップページ"><span class="header-logo-text">Medeco <span>Navi</span></span></a>
+    <nav class="header-nav" aria-label="グローバルナビゲーション">
+      <a href="../../diseases/index.html" class="header-nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+      <a href="../../symptoms/index.html" class="header-nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>症状から調べる</a>
+      <a href="../../treatments/index.html" class="header-nav-item is-active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>治療法から調べる</a>
+    </nav>
+    <div class="header-actions">
+      <button class="header-search-btn" data-search-open aria-label="検索を開く"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div>
+</header>
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header"><span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span><button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div class="mobile-menu-body">
+    <a href="../../diseases/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../../symptoms/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../../treatments/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+  </div>
+</nav>
+
+<main id="main-content">
+  <div class="emergency-banner" role="alert"><strong>⚠️ 症状が重篤・急激に悪化している場合は、直ちに救急（119番）へ。</strong> このサイトは医療診断ではありません。</div>
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item"><a href="../../treatments/index.html">治療法から調べる</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">脊髄刺激療法（SCS）</span>
+      </nav>
+      <div class="page-hero-meta">
+        <span class="badge badge-primary">植込み型デバイス</span>
+        <span class="badge badge-info">神経調節療法</span>
+        <span class="badge badge-neutral">難治性慢性疼痛</span>
+      </div>
+      <h1 class="page-hero-title">脊髄刺激療法（SCS）</h1>
+      <p class="page-hero-description">Spinal Cord Stimulation（脊髄刺激療法）は、脊髄の硬膜外腔に電極を留置し微弱な電気刺激を与えることで痛みの伝達を抑制する植込み型神経調節療法。薬物療法で改善しない難治性慢性疼痛に対する有効な治療選択肢。</p>
+      <div class="alert alert-warning" style="margin-top:var(--space-5);max-width:720px;" role="note">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div><strong>このページの情報について：</strong>掲載内容はAIによる診断ではなく、一般的な医療情報の提供が目的です。治療の適応・実施は必ず専門医が判断します。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="detail-layout">
+      <article class="detail-main">
+        <nav class="toc" aria-label="このページの目次">
+          <p class="toc-title">目次</p>
+          <ol class="toc-list">
+            <li class="toc-item"><a href="#mechanism">SCSの仕組み</a></li>
+            <li class="toc-item"><a href="#indications">適応となる疾患・状態</a></li>
+            <li class="toc-item"><a href="#procedure">治療の流れ</a></li>
+            <li class="toc-item"><a href="#effectiveness">効果・エビデンス</a></li>
+            <li class="toc-item"><a href="#risks">リスク・注意点</a></li>
+            <li class="toc-item"><a href="#life-with-scs">SCS植込み後の生活</a></li>
+            <li class="toc-item"><a href="#related-diseases">関連する疾患</a></li>
+          </ol>
+        </nav>
+
+        <section id="mechanism" class="detail-section">
+          <h2 class="detail-section-title">SCSの仕組み</h2>
+          <p>脊髄刺激療法（SCS）は、脊髄の後側（硬膜外腔）に細いリード電極を留置し、パルスジェネレーター（IPG）から送られる微弱な電気パルスで脊髄後角の神経回路を調節することで、痛みの脳への伝達を抑制する治療法です。</p>
+          <div style="display:grid;gap:var(--space-4);margin-top:var(--space-4);">
+            <div style="padding:var(--space-5);background:var(--color-primary-light);border-radius:var(--radius-lg);">
+              <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">痛みを抑える2つのメカニズム</h3>
+              <div style="display:grid;gap:var(--space-3);">
+                <div style="padding:var(--space-3);background:#fff;border-radius:var(--radius-md);">
+                  <strong style="font-size:var(--text-sm);">1. ゲートコントロール理論</strong>
+                  <p style="font-size:var(--text-sm);margin-top:var(--space-1);">太い触覚線維（Aβ線維）を電気刺激することで脊髄後角の「ゲート」を閉じ、細い痛み線維（Aδ・C線維）からの信号が上行するのをブロックする。従来の「パレステジア（ジンジン感）刺激」はこの原理。</p>
+                </div>
+                <div style="padding:var(--space-3);background:#fff;border-radius:var(--radius-md);">
+                  <strong style="font-size:var(--text-sm);">2. 神経調節作用（新世代SCS）</strong>
+                  <p style="font-size:var(--text-sm);margin-top:var(--space-1);">高周波（10kHz）・バースト刺激などの新しい刺激モードは、感覚なしに（パレステジアなし）痛みを抑制する。GABA系神経伝達物質の放出増加・下行性疼痛抑制系の活性化が関与すると考えられている。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:var(--space-4);padding:var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);">
+            <h3 style="font-size:var(--text-sm);font-weight:var(--font-bold);margin-bottom:var(--space-2);">SCSシステムの構成部品</h3>
+            <ul style="font-size:var(--text-sm);display:grid;gap:var(--space-2);">
+              <li><strong>リード電極：</strong>硬膜外腔に留置。複数の接点（8〜32極）を持つ。</li>
+              <li><strong>パルスジェネレーター（IPG）：</strong>腹部や臀部皮下に植込む電池内蔵の本体。充電可能型と非充電型がある。</li>
+              <li><strong>患者用リモコン：</strong>患者自身が刺激の強さを調整できる。</li>
+              <li><strong>充電器（充電可能型）：</strong>体外から経皮的に充電。週1〜2回程度。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="indications" class="detail-section">
+          <h2 class="detail-section-title">適応となる疾患・状態</h2>
+          <p>SCSは、保存的治療（薬物療法・ブロック療法・理学療法）で十分な効果が得られない難治性慢性疼痛に適応されます。</p>
+          <div style="display:grid;gap:var(--space-3);margin-top:var(--space-4);">
+            <div style="padding:var(--space-4);background:var(--color-primary-light);border-radius:var(--radius-md);">
+              <h3 style="font-size:var(--text-sm);font-weight:var(--font-bold);margin-bottom:var(--space-2);">保険適用（日本）のある主な適応</h3>
+              <ul style="font-size:var(--text-sm);display:grid;gap:var(--space-2);">
+                <li>✅ <strong>脊椎手術後疼痛症候群（FBSS）：</strong>腰椎手術後の難治性腰下肢痛。最も確立した適応の一つ。</li>
+                <li>✅ <strong>複合性局所疼痛症候群（CRPS）：</strong>特にTypeI・上下肢への適応。</li>
+                <li>✅ <strong>難治性狭心症（血行再建不能例）：</strong>心臓への血流改善と疼痛緩和。</li>
+                <li>✅ <strong>末梢動脈疾患（重症虚血肢）：</strong>血流改善効果と疼痛緩和。</li>
+              </ul>
+            </div>
+            <div style="padding:var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);">
+              <h3 style="font-size:var(--text-sm);font-weight:var(--font-bold);margin-bottom:var(--space-2);">エビデンスが蓄積されている疾患（海外）</h3>
+              <ul style="font-size:var(--text-sm);display:grid;gap:var(--space-2);">
+                <li>帯状疱疹後神経痛（PHN）</li>
+                <li>糖尿病性末梢神経障害による疼痛</li>
+                <li>腕神経叢損傷後疼痛</li>
+                <li>脊髄損傷後疼痛</li>
+                <li>脳卒中後疼痛（視床痛など）</li>
+              </ul>
+            </div>
+          </div>
+          <div style="margin-top:var(--space-4);" class="alert alert-warning" role="note">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+            <div><strong>適応の判断には精神心理評価が必須：</strong>重篤なうつ病・薬物依存・手術への非現実的な期待がある場合は植込みを行わない。術前に精神科・臨床心理士による評価が行われます。</div>
+          </div>
+        </section>
+
+        <section id="procedure" class="detail-section">
+          <h2 class="detail-section-title">治療の流れ</h2>
+          <p>SCSは段階的に行われます。まず試験刺激（トライアル）で効果を確認してから本植込みへ進むため、「効果がなかった場合に戻れる」という大きな利点があります。</p>
+          <div style="display:grid;gap:var(--space-4);margin-top:var(--space-4);">
+            <div style="display:flex;gap:var(--space-4);align-items:flex-start;">
+              <span class="step-number">1</span>
+              <div>
+                <strong>初診・スクリーニング</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-1);">ペインクリニック専門医による診察・画像評価・疼痛スコア測定。精神心理評価（精神科医・臨床心理士）。保存的治療で十分な効果がないことを確認。</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:var(--space-4);align-items:flex-start;">
+              <span class="step-number">2</span>
+              <div>
+                <strong>試験刺激（トライアル期間：7〜14日間）</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-1);">局所麻酔下で経皮的にリード電極を留置。体外式の仮ジェネレーターで刺激を行い、日常生活での効果を確認。痛みが50%以上軽減されれば本植込みの適応あり。</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:var(--space-4);align-items:flex-start;">
+              <span class="step-number">3</span>
+              <div>
+                <strong>本植込み手術</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-1);">全身麻酔または局所麻酔下で行う。リード電極を硬膜外腔の正確な位置に固定し、皮下トンネルを通してパルスジェネレーターを腹部・臀部皮下に植込む。手術時間は1〜3時間程度。</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:var(--space-4);align-items:flex-start;">
+              <span class="step-number">4</span>
+              <div>
+                <strong>プログラミング・調整</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-1);">術後に専門技師（クリニカルスペシャリスト）と共に刺激パラメータを調整。痛みの部位・性質に合わせて電極の組み合わせ・刺激周波数・波形を最適化する。</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:var(--space-4);align-items:flex-start;">
+              <span class="step-number">5</span>
+              <div>
+                <strong>定期フォローアップ</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-1);">植込み後も定期的な外来受診でプログラムの再調整・電池状態の確認を行う。IPGの電池寿命は充電型で10年以上、非充電型では3〜5年程度（設定による）。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="effectiveness" class="detail-section">
+          <h2 class="detail-section-title">効果・エビデンス</h2>
+          <div style="display:grid;gap:var(--space-4);">
+            <div style="padding:var(--space-5);background:var(--color-primary-light);border-radius:var(--radius-lg);">
+              <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">主要な臨床試験の結果</h3>
+              <div style="overflow-x:auto;">
+                <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+                  <thead>
+                    <tr style="background:var(--color-primary);color:#fff;">
+                      <th style="padding:var(--space-2) var(--space-3);text-align:left;">疾患・試験</th>
+                      <th style="padding:var(--space-2) var(--space-3);text-align:left;">主な結果</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom:1px solid var(--color-border);">
+                      <td style="padding:var(--space-2) var(--space-3);">FBSS（PROCESS試験）</td>
+                      <td style="padding:var(--space-2) var(--space-3);">SCS群で6か月後に50%以上の疼痛軽減が48% vs 薬物療法群9%</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--color-border);background:var(--color-bg-alt);">
+                      <td style="padding:var(--space-2) var(--space-3);">糖尿病性神経障害（SENZA-PDN）</td>
+                      <td style="padding:var(--space-2) var(--space-3);">10kHz SCSで6か月後の50%改善率79%（対照群5%）</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--color-border);">
+                      <td style="padding:var(--space-2) var(--space-3);">CRPS（RCT複数）</td>
+                      <td style="padding:var(--space-2) var(--space-3);">物理療法単独比でVAS有意低下・QOL改善</td>
+                    </tr>
+                    <tr style="background:var(--color-bg-alt);">
+                      <td style="padding:var(--space-2) var(--space-3);">難治性狭心症</td>
+                      <td style="padding:var(--space-2) var(--space-3);">発作頻度・ニトログリセリン使用量の有意減少</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div style="padding:var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);">
+              <h3 style="font-size:var(--text-sm);font-weight:var(--font-bold);margin-bottom:var(--space-2);">SCSが期待できる効果</h3>
+              <ul style="font-size:var(--text-sm);display:grid;gap:var(--space-2);">
+                <li>✅ 痛みの強度の低下（NRS/VAS スコアの改善）</li>
+                <li>✅ 鎮痛薬（オピオイドを含む）の使用量減少</li>
+                <li>✅ 睡眠・QOL・日常生活機能の改善</li>
+                <li>✅ 職場復帰率の向上（FBSS等）</li>
+                <li>✅ 長期（5年以上）にわたる効果持続例が多い</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="risks" class="detail-section">
+          <h2 class="detail-section-title">リスク・注意点</h2>
+          <div class="alert alert-warning" role="note"><svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg><div>SCSはすべての患者に効果があるわけではありません。リスクと利益を十分に理解した上で、専門医と相談して決定してください。</div></div>
+          <div style="display:grid;gap:var(--space-3);margin-top:var(--space-4);">
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-warning);background:#fffbf0;">
+              <strong style="font-size:var(--text-sm);">デバイス関連の合併症（5〜10%）</strong>
+              <ul style="font-size:var(--text-sm);margin-top:var(--space-2);display:grid;gap:var(--space-1);">
+                <li>リード電極の移動・断線（最多）</li>
+                <li>植込み部位の感染（1〜3%）</li>
+                <li>IPGポケットの不快感・血腫</li>
+                <li>過剰刺激（不快なパレステジア）</li>
+              </ul>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-danger);background:#fff5f5;">
+              <strong style="font-size:var(--text-sm);">重篤な合併症（まれ）</strong>
+              <ul style="font-size:var(--text-sm);margin-top:var(--space-2);display:grid;gap:var(--space-1);">
+                <li>硬膜外血腫・膿瘍（神経障害のリスク）</li>
+                <li>脊髄損傷（電極留置時の手技的合併症）</li>
+              </ul>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-border);background:var(--color-bg-alt);">
+              <strong style="font-size:var(--text-sm);">MRI検査の制限</strong>
+              <p style="font-size:var(--text-sm);margin-top:var(--space-2);">従来のSCSはMRI検査が制限されていたが、近年のMRI対応（条件付き）機種では一定条件下でのMRI撮影が可能。植込み前に担当医に確認を。</p>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-border);background:var(--color-bg-alt);">
+              <strong style="font-size:var(--text-sm);">禁忌・注意事項</strong>
+              <ul style="font-size:var(--text-sm);margin-top:var(--space-2);display:grid;gap:var(--space-1);">
+                <li>ペースメーカー・除細動器植込み患者（機種により対応可の場合も）</li>
+                <li>活動性感染症・敗血症</li>
+                <li>出血傾向・抗凝固薬使用中（休薬が必要）</li>
+                <li>妊娠中・妊娠を計画中の女性</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="life-with-scs" class="detail-section">
+          <h2 class="detail-section-title">SCS植込み後の生活</h2>
+          <p>SCSを植込んだ後も多くの患者は通常の日常生活を送ることができます。いくつかの制限・注意点を理解しておくことが大切です。</p>
+          <div style="display:grid;gap:var(--space-3);margin-top:var(--space-4);">
+            <div style="padding:var(--space-4);background:var(--color-primary-light);border-radius:var(--radius-md);">
+              <h3 style="font-size:var(--text-sm);font-weight:var(--font-bold);margin-bottom:var(--space-2);">日常生活での注意点</h3>
+              <ul style="font-size:var(--text-sm);display:grid;gap:var(--space-2);">
+                <li><strong>電磁干渉への注意：</strong>強力な電磁場（工業用溶接機・セキュリティゲートなど）の近くではデバイスをオフに。日常の家電製品（電子レンジ・スマートフォン）は問題なし。</li>
+                <li><strong>体動とリード：</strong>植込み直後は急激な脊椎の屈伸を避ける（リード移動予防）。数週間後は通常の活動を再開可能。</li>
+                <li><strong>充電型の場合：</strong>週1〜2回、30〜60分程度の充電が必要。充電を忘れるとデバイスが停止するため、生活リズムに組み込む。</li>
+                <li><strong>運転：</strong>刺激感（パレステジア）が集中の妨げになる場合は運転時にデバイスをオフに。</li>
+              </ul>
+            </div>
+            <div style="padding:var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);">
+              <h3 style="font-size:var(--text-sm);font-weight:var(--font-bold);margin-bottom:var(--space-2);">定期受診でのチェック事項</h3>
+              <ul style="font-size:var(--text-sm);display:grid;gap:var(--space-2);">
+                <li>プログラム設定の最適化（生活変化・疼痛パターン変化への対応）</li>
+                <li>電池残量確認（充電型：残量低下のモニタリング）</li>
+                <li>リード位置の確認（X線）</li>
+                <li>植込み部位の皮膚状態チェック</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="related-diseases" class="detail-section">
+          <h2 class="detail-section-title">関連する疾患</h2>
+          <div style="display:grid;gap:var(--space-3);">
+            <a href="../../diseases/failed-back-surgery-syndrome/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:var(--color-bg-alt);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🔩</div>
+              <div><strong>脊椎手術後疼痛症候群（FBSS）</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">SCSが最も確立された適応の一つ。腰下肢痛に対して薬物療法を上回るエビデンス。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="../../diseases/crps/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:#fff5f5;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🔥</div>
+              <div><strong>複合性局所疼痛症候群（CRPS）</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">上下肢のCRPS TypeI・IIに対する有効な治療選択肢。早期介入でより高い効果。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="../../diseases/diabetic-neuropathy/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:var(--color-bg-alt);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">💉</div>
+              <div><strong>糖尿病性神経障害</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">10kHz高周波SCSで大規模RCTにより有効性が示された新しい適応。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="../../diseases/postherpetic-neuralgia/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:#fffbf0;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🦠</div>
+              <div><strong>帯状疱疹後神経痛（PHN）</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">薬物抵抗性の難治性PHNに対してSCSの有効性が報告されている。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="../../diseases/brachial-plexus-injury/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:var(--color-primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">⚡</div>
+              <div><strong>腕神経叢損傷</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">脱神経疼痛・アロディニアに対してDRG刺激療法との併用で効果が期待される。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <aside class="detail-sidebar">
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">治療の種類</h3>
+          <div style="display:grid;gap:var(--space-2);font-size:var(--text-sm);">
+            <div style="padding:var(--space-2) var(--space-3);background:var(--color-primary-light);border-radius:var(--radius-md);"><span style="font-weight:var(--font-bold);color:var(--color-primary);">植込み型デバイス</span></div>
+            <div style="padding:var(--space-2) var(--space-3);background:var(--color-bg-alt);border-radius:var(--radius-md);">神経調節療法</div>
+            <div style="padding:var(--space-2) var(--space-3);background:var(--color-bg-alt);border-radius:var(--radius-md);">低侵襲手術</div>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">治療のポイント</h3>
+          <ul style="list-style:none;display:grid;gap:var(--space-2);font-size:var(--text-sm);">
+            <li style="display:flex;gap:var(--space-2);"><span style="color:var(--color-primary);font-weight:var(--font-bold);">✓</span><span>試験刺激で効果確認後に本植込み</span></li>
+            <li style="display:flex;gap:var(--space-2);"><span style="color:var(--color-primary);font-weight:var(--font-bold);">✓</span><span>可逆的・調整可能な治療</span></li>
+            <li style="display:flex;gap:var(--space-2);"><span style="color:var(--color-primary);font-weight:var(--font-bold);">✓</span><span>精神心理評価が必須</span></li>
+            <li style="display:flex;gap:var(--space-2);"><span style="color:var(--color-primary);font-weight:var(--font-bold);">✓</span><span>多職種チームでのフォロー</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">主な適応疾患</h3>
+          <ul style="list-style:none;display:grid;gap:var(--space-2);">
+            <li><a href="../../diseases/failed-back-surgery-syndrome/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 脊椎手術後疼痛症候群</a></li>
+            <li><a href="../../diseases/crps/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ CRPS</a></li>
+            <li><a href="../../diseases/diabetic-neuropathy/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 糖尿病性神経障害</a></li>
+            <li><a href="../../diseases/postherpetic-neuralgia/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 帯状疱疹後神経痛</a></li>
+            <li><a href="../../diseases/brachial-plexus-injury/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 腕神経叢損傷</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget" style="background:var(--color-primary-light);border-radius:var(--radius-lg);border:1px solid var(--color-primary);">
+          <h3 style="font-size:var(--text-base);margin-bottom:var(--space-2);color:var(--color-primary);">SCSについて相談する</h3>
+          <p style="font-size:var(--text-sm);margin-bottom:var(--space-3);">SCSの適応かどうかはペインクリニック専門医への受診で評価できます。</p>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);">「難治性の痛みで日常生活が困難」「複数の薬を試しても効果がない」という方はご相談を。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・家族のための医療情報ナビゲーション。</p>
+      </div>
+      <div>
+        <p class="footer-col-title">疾患から調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">疾患一覧</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">症状から調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../symptoms/index.html">症状一覧</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">治療法から調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../treatments/index.html">治療一覧</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2024 Medeco Navi. 本サイトは医療診断を行うものではありません。</p>
+    </div>
+  </div>
+</footer>
+<button id="scroll-top-btn" aria-label="ページトップへ戻る"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+<script src="../../assets/js/search.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('scroll-top-btn');
+  window.addEventListener('scroll',function(){btn.classList.toggle('is-visible',window.scrollY>300);});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  var tocItems=document.querySelectorAll('.toc-item');
+  var sections=Array.from(document.querySelectorAll('.detail-section'));
+  window.addEventListener('scroll',function(){
+    var pos=window.scrollY+120;
+    var cur=sections.filter(function(s){return s.offsetTop<=pos;}).pop();
+    tocItems.forEach(function(t){t.classList.remove('is-active');});
+    if(cur){var a=document.querySelector('.toc-item a[href="#'+cur.id+'"]');if(a)a.closest('.toc-item').classList.add('is-active');}
+  });
+})();
+</script>
+</body>
+</html>

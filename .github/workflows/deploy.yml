@@ -1,0 +1,61 @@
+name: Deploy to S3 + CloudFront
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region:            ${{ secrets.AWS_REGION }}
+
+      - name: Sync files to S3
+        run: |
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "*.md" \
+            --cache-control "public, max-age=86400" \
+            --metadata-directive REPLACE
+
+      # HTMLファイルはキャッシュを短めに設定（コンテンツ更新を反映しやすくする）
+      - name: Set cache headers for HTML files
+        run: |
+          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME }} s3://${{ secrets.S3_BUCKET_NAME }} \
+            --exclude "*" \
+            --include "*.html" \
+            --recursive \
+            --metadata-directive REPLACE \
+            --cache-control "public, max-age=300, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+      # JSONデータファイルのキャッシュを短めに設定
+      - name: Set cache headers for JSON files
+        run: |
+          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME }} s3://${{ secrets.S3_BUCKET_NAME }} \
+            --exclude "*" \
+            --include "*.json" \
+            --recursive \
+            --metadata-directive REPLACE \
+            --cache-control "public, max-age=300, must-revalidate" \
+            --content-type "application/json"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"

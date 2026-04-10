@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="糖尿病性ニューロパチー（Diabetic Neuropathy）— 原因・症状・診断・治療法をわかりやすく解説。Medeco Navi。">
+  <title>糖尿病性ニューロパチー — 疾患詳細 | Medeco Navi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <style>
+    /* 目次のアクティブ項目 */
+    .toc-item.is-active a {
+      color: var(--color-primary);
+      background: var(--color-primary-light);
+      font-weight: var(--font-medium);
+    }
+    #scroll-top-btn {
+      position: fixed;
+      bottom: var(--space-6);
+      right: var(--space-6);
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+      z-index: var(--z-sticky);
+    }
+    #scroll-top-btn.is-visible { opacity: 1; visibility: visible; }
+    #scroll-top-btn:hover { background: var(--color-primary-hover); }
+  </style>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+
+<!-- 検索オーバーレイ -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1">
+        <input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力">
+        <span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      </div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- ヘッダー -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../../index.html" class="header-logo" aria-label="Medeco Navi トップページ">
+        <span class="header-logo-text">Medeco <span>Navi</span></span>
+      </a>
+      <nav class="header-nav" aria-label="グローバルナビゲーション">
+        <a href="../../diseases/index.html" class="header-nav-item is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          疾患から調べる
+        </a>
+        <a href="../../symptoms/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          症状から調べる
+        </a>
+        <a href="../../treatments/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+          治療法から調べる
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-search-btn" data-search-open aria-label="検索を開く">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- モバイルメニュー -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span>
+    <button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="../../diseases/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../../symptoms/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../../treatments/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item"><a href="../../diseases/index.html">疾患から調べる</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">糖尿病性ニューロパチー</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="badge badge-neutral">内分泌系</span>
+        <span class="badge badge-primary">糖尿病合併症</span>
+        <span class="badge badge-primary">神経障害性疼痛</span>
+        <span class="badge badge-primary">慢性疼痛</span>
+      </div>
+
+      <h1 class="page-hero-title">糖尿病性ニューロパチー</h1>
+      <p class="page-hero-description">
+        糖尿病による慢性的な高血糖が末梢神経を障害する合併症。糖尿病の3大合併症のひとつで、
+        両足先から始まる左右対称のしびれ・疼痛が特徴的な「靴下型」の分布を示します。
+      </p>
+      <p class="page-hero-updated">最終更新：2025年4月</p>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div class="container">
+    <div class="detail-layout">
+
+      <!-- メインカラム -->
+      <article class="detail-main">
+
+        <!-- 目次 -->
+        <nav class="toc" aria-label="このページの目次">
+          <p class="toc-title">目次</p>
+          <ol class="toc-list">
+            <li class="toc-item"><a href="#overview">概要</a></li>
+            <li class="toc-item"><a href="#causes">原因・リスク因子</a></li>
+            <li class="toc-item"><a href="#symptoms">主な症状</a></li>
+            <li class="toc-item"><a href="#diagnosis">診断方法</a></li>
+            <li class="toc-item"><a href="#treatment">治療法</a></li>
+            <li class="toc-item"><a href="#daily-life">生活上の注意点</a></li>
+            <li class="toc-item"><a href="#faq">よくある質問</a></li>
+            <li class="toc-item"><a href="#related">関連疾患</a></li>
+          </ol>
+        </nav>
+
+        <!-- 概要 -->
+        <section class="detail-section" id="overview" aria-labelledby="overview-title">
+          <h2 class="detail-section-title" id="overview-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            概要
+          </h2>
+          <p>
+            糖尿病性ニューロパチーとは、糖尿病による慢性的な高血糖が末梢神経を障害する合併症です。
+            糖尿病患者の約30〜50%に発症するとされており、糖尿病の3大合併症（網膜症・腎症・神経障害）のひとつです。
+          </p>
+          <p style="margin-top:var(--space-4);">
+            最も多いのは「遠位対称性多発神経障害」と呼ばれる型で、両足先から始まる左右対称のしびれや疼痛が特徴的です。
+            この症状分布から「靴下型」とも表現されます。症状は夜間に増悪しやすく、睡眠障害の原因にもなります。
+          </p>
+
+          <div class="alert alert-info" style="margin-top:var(--space-6);" role="note">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div>
+              <strong>糖尿病の3大合併症</strong><br>
+              糖尿病による慢性合併症には「糖尿病性網膜症（失明の原因）」「糖尿病性腎症（透析の原因）」「糖尿病性神経障害（ニューロパチー）」があります。血糖コントロールによってこれらの予防・進行抑制が可能です。
+            </div>
+          </div>
+        </section>
+
+        <!-- 原因・リスク因子 -->
+        <section class="detail-section" id="causes" aria-labelledby="causes-title">
+          <h2 class="detail-section-title" id="causes-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            原因・リスク因子
+          </h2>
+          <p>
+            高血糖状態が持続することで、神経へのダメージが蓄積されます。主なメカニズムは以下の通りです。
+          </p>
+
+          <ul style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);">
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">1</span>
+              <div><strong>酸化ストレスと微小血管障害</strong>：高血糖により神経細胞への酸化ストレスが高まり、神経を栄養する微小血管が障害されます。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">2</span>
+              <div><strong>進行性の軸索変性</strong>：神経の軸索（信号を伝える繊維）が徐々に変性・萎縮します。末梢の長い神経ほど影響を受けやすいため、足先から症状が現れます。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">3</span>
+              <div><strong>シュワン細胞の機能障害</strong>：神経の絶縁体となるミエリン鞘を形成するシュワン細胞が障害され、神経伝導速度が低下します。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">4</span>
+              <div><strong>血糖コントロール不良</strong>：HbA1cが高い状態が続くほど神経障害の発症・進行リスクが高まります。罹病期間が長くなるほどリスクも上がります。</div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 主な症状 -->
+        <section class="detail-section" id="symptoms" aria-labelledby="symptoms-title">
+          <h2 class="detail-section-title" id="symptoms-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            主な症状
+          </h2>
+          <p>
+            症状は主に感覚神経の障害によるものですが、進行すると運動神経・自律神経にも影響します。
+            初期症状として最も多いのは足先・足底のしびれや異常感覚です。
+          </p>
+
+          <ul style="margin-top:var(--space-5);display:flex;flex-direction:column;gap:var(--space-2);">
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <a href="../../symptoms/tingling-pain/index.html" style="color:var(--color-text);">足先・足底のチクチク・ピリピリ感（感覚異常）</a>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <a href="../../symptoms/burning-pain-sensation/index.html" style="color:var(--color-text);">灼熱感・焼けるような痛み（神経障害性疼痛）</a>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>感覚鈍麻（感じにくい・感覚がなくなる）</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <a href="../../symptoms/nocturnal-pain-worsening/index.html" style="color:var(--color-text);">夜間に増悪しやすい痛み・睡眠障害</a>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>進行すると手にも広がる（手袋型の分布）</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>重症化による潰瘍・壊疽リスク（感覚消失により傷に気づかない）</span>
+            </li>
+          </ul>
+
+          <div class="alert alert-danger" style="margin-top:var(--space-6);" role="alert">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div>
+              <strong>足の感覚消失に注意</strong><br>
+              足の感覚が失われると、傷・水疱・火傷に気づかないまま放置してしまい、感染や壊疽に進行するリスクがあります。
+              足の異変を感じたら速やかに医師に相談してください。
+            </div>
+          </div>
+        </section>
+
+        <!-- 診断方法 -->
+        <section class="detail-section" id="diagnosis" aria-labelledby="diagnosis-title">
+          <h2 class="detail-section-title" id="diagnosis-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            診断方法
+          </h2>
+          <p>
+            糖尿病性ニューロパチーの診断は、糖尿病の既往歴と神経学的な身体所見・検査結果を組み合わせて行います。
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-5);">
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>振動覚検査・温度覚検査・腱反射検査</strong>：音叉を使った振動覚の低下、温冷覚の異常、アキレス腱反射の減弱・消失を確認します。簡便に行える基本的な神経学的検査です。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>神経伝導速度検査（NCS）</strong>：神経に電気刺激を与えて伝導速度を測定します。神経障害の程度・範囲を客観的に評価できる重要な検査です。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>血糖コントロール指標（HbA1c）の確認</strong>：過去1〜2か月の平均血糖値を反映するHbA1cを確認し、血糖コントロールの状況と神経障害との関連を評価します。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>足圧計・モノフィラメント検査</strong>：足底の感覚低下を定量的に評価します。フットケアの必要性の判断に使われます。
+            </div>
+          </div>
+        </section>
+
+        <!-- 治療法 -->
+        <section class="detail-section" id="treatment" aria-labelledby="treatment-title">
+          <h2 class="detail-section-title" id="treatment-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+            治療法
+          </h2>
+          <p>
+            治療の中心は<strong>血糖コントロール</strong>です。血糖を適切に管理することで神経障害の進行を遅らせることができます。
+            疼痛コントロールには薬物療法が用いられ、難治性の場合には脊髄刺激療法（SCS）も選択肢となります。
+          </p>
+
+          <h3 style="margin-top:var(--space-6);margin-bottom:var(--space-3);font-size:var(--text-lg);">主な治療アプローチ</h3>
+          <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-primary);background:var(--color-bg-alt);border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
+              <strong style="color:var(--color-primary);">血糖コントロール（最重要）</strong>
+              <p style="margin-top:var(--space-2);font-size:var(--text-sm);color:var(--color-text-sub);">
+                HbA1cを目標値内に維持することで神経障害の発症・進行を抑制します。インスリン療法・経口血糖降下薬の適切な使用が基本です。
+              </p>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-secondary);background:var(--color-bg-alt);border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
+              <strong>薬物療法（疼痛コントロール）</strong>
+              <p style="margin-top:var(--space-2);font-size:var(--text-sm);color:var(--color-text-sub);">
+                プレガバリン・ガバペンチン（神経障害性疼痛薬）、デュロキセチン（SNRIに属する疼痛改善薬）、メキシレチン（抗不整脈薬・疼痛抑制）などが用いられます。
+              </p>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-accent);background:var(--color-bg-alt);border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
+              <strong>脊髄刺激療法（SCS）</strong>
+              <p style="margin-top:var(--space-2);font-size:var(--text-sm);color:var(--color-text-sub);">
+                薬物療法で効果が不十分な難治性の神経障害性疼痛に対して有効な治療法です。脊髄に電気刺激を加えることで疼痛シグナルを抑制します。
+                <a href="../../treatments/spinal-cord-stimulation/index.html" style="color:var(--color-primary);">脊髄刺激療法の詳細はこちら</a>
+              </p>
+            </div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-success);background:var(--color-bg-alt);border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
+              <strong>フットケア（潰瘍予防）</strong>
+              <p style="margin-top:var(--space-2);font-size:var(--text-sm);color:var(--color-text-sub);">
+                感覚障害により足の傷に気づきにくくなるため、専門的なフットケアによって潰瘍・壊疽の予防が重要です。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 生活上の注意点 -->
+        <section class="detail-section" id="daily-life" aria-labelledby="daily-title">
+          <h2 class="detail-section-title" id="daily-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            生活上の注意点
+          </h2>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-4);">
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">血糖値の厳格な管理</strong><br>
+              食事・運動・服薬管理を徹底し、HbA1cを目標値内に維持しましょう。血糖コントロールが最も重要な予防・進行抑制策です。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">毎日の足の観察</strong><br>
+              傷・水疱・発赤・変色・爪の変形などを毎日確認しましょう。感覚が低下していると気づきにくいため、視覚による観察が重要です。鏡を使って足の裏まで確認する習慣をつけましょう。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">適切な靴の選択</strong><br>
+              足に合った靴を選び、素足で歩かないようにしましょう。サイズが合っていない靴は靴擦れ・潰瘍の原因になります。糖尿病専用インソールも有効です。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">禁煙（血流改善）</strong><br>
+              喫煙は末梢血管を収縮させ、神経への血流をさらに低下させます。禁煙によって神経障害の進行抑制につながります。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">定期的な眼科・腎臓科受診</strong><br>
+              糖尿病性神経障害は網膜症・腎症と同時に進行することが多くあります。各専門科での定期検査を忘れずに受けましょう。
+            </li>
+          </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="detail-section" id="faq" aria-labelledby="faq-title">
+          <h2 class="detail-section-title" id="faq-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            よくある質問
+          </h2>
+
+          <div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>血糖を下げれば痛みは治りますか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  血糖コントロールは進行を遅らせる最も重要な治療です。ただし一度損傷した神経の修復には時間がかかり、症状が改善するまで数か月以上かかることがあります。また、血糖を急激に改善させると一時的に症状が悪化する「治療誘発性ニューロパチー」が起こることもあるため、医師の指示のもとで段階的に管理することが大切です。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>足の感覚がなくなるのはなぜ危険ですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  感覚が低下すると、傷や火傷に気づかず放置してしまい、感染・壊疽に進行するリスクがあります。特に糖尿病患者は免疫機能が低下していることが多く、小さな傷から重篤な感染症になりやすい傾向があります。足を失うことにつながる可能性もあるため、毎日の足の観察が非常に重要です。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>どの科を受診すればよいですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  まずはかかりつけの内科・糖尿病内科・代謝内科に相談しましょう。疼痛が強い場合はペインクリニックへの紹介を依頼することができます。足の潰瘍・壊疽が疑われる場合は形成外科・血管外科への受診が必要になります。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 関連疾患 -->
+        <section id="related" aria-labelledby="related-title">
+          <h2 class="detail-section-title" id="related-title" style="border-bottom:2px solid var(--color-primary-light);padding-bottom:var(--space-3);margin-bottom:var(--space-5);">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            関連疾患
+          </h2>
+          <div class="scroll-card-list" role="list" aria-label="関連疾患">
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/diabetes/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">🩸</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">糖尿病</h3>
+                <p class="card-summary">糖尿病性ニューロパチーの根本原因。血糖コントロールが最重要。</p>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/neuropathic-pain/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">⚡</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">神経障害性疼痛</h3>
+                <p class="card-summary">糖尿病性ニューロパチーは神経障害性疼痛の代表的な原因疾患。</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 参考情報 -->
+        <div style="margin-top:var(--space-8);padding:var(--space-5);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-bottom:var(--space-2);font-weight:var(--font-bold);text-transform:uppercase;">参考情報</p>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-1);">
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">日本糖尿病学会「糖尿病治療ガイド」</li>
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">日本ペイン・クリニック学会「神経障害性疼痛薬物療法ガイドライン」</li>
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">International Association for the Study of Pain (IASP) — Diabetic Neuropathy Guidelines</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- サイドバー -->
+      <aside class="detail-sidebar" aria-label="関連情報">
+
+        <!-- 重要度 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">重要度</p>
+          <div class="urgency-indicator urgency-medium">
+            <span class="urgency-dot"></span>
+            <span>注意</span>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-2);">血糖コントロールと定期的な足の観察で重症化を予防できます</p>
+        </div>
+
+        <!-- 関連症状 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する症状</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/tingling-pain/index.html">
+                <span>⚡</span>チクチク・しびれ感
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/burning-pain-sensation/index.html">
+                <span>🔥</span>灼熱感・焼けるような痛み
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/nocturnal-pain-worsening/index.html">
+                <span>🌙</span>夜間増悪する痛み
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 関連治療法 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する治療法</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="../../treatments/spinal-cord-stimulation/index.html">
+                <span>⚙️</span>脊髄刺激療法（SCS）
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <span style="display:flex;gap:var(--space-2);align-items:center;padding:var(--space-2) 0;font-size:var(--text-sm);color:var(--color-text-sub);">
+                <span>💊</span>疼痛管理・鎮痛療法
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 受診の目安 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">受診の目安</p>
+          <p style="font-size:var(--text-sm);color:var(--color-text-sub);line-height:var(--leading-loose);">
+            糖尿病と診断されている方で足のしびれ・灼熱感・感覚異常がある場合は、
+            かかりつけ医・糖尿病内科に相談しましょう。
+            足に傷や潰瘍がある場合は速やかに受診を。
+          </p>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section style="padding:var(--space-12) 0;background:var(--color-bg-alt);">
+    <div class="container">
+      <div class="cta-section">
+        <p style="font-size:32px;margin-bottom:var(--space-3);" aria-hidden="true">👨‍⚕️</p>
+        <h2 class="cta-title">気になることは、まず医師に相談を</h2>
+        <p class="cta-description">
+          このページの情報はあくまでも参考です。<br>
+          実際の診断・治療の判断は、必ず医師にご相談ください。
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;">
+          <a href="../../diseases/index.html" class="btn btn-outline">他の疾患を調べる</a>
+          <a href="../../treatments/index.html" class="btn btn-primary">治療法を調べる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 医療免責事項 -->
+  <div class="disclaimer-bar" role="note" aria-label="医療免責事項">
+    <div class="container">
+      <p>このサイトは情報提供を目的としており、医療診断・治療の代替となるものではありません。症状がある場合は必ず医療機関を受診してください。</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・ご家族のための疾患情報ポータル。</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);">運営：<a href="https://medeco.io/index.html" target="_blank" rel="noopener noreferrer" style="color:inherit;">株式会社Medeco</a></p>
+      </div>
+      <div>
+        <p class="footer-col-title">調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">疾患から調べる</a></li>
+          <li><a href="../../symptoms/index.html">症状から調べる</a></li>
+          <li><a href="../../treatments/index.html">治療法から調べる</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">疾患カテゴリ</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">循環器系</a></li>
+          <li><a href="../../diseases/index.html">神経系</a></li>
+          <li><a href="../../diseases/index.html">運動器系</a></li>
+          <li><a href="../../diseases/index.html">内分泌系</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">サポート</p>
+        <ul class="footer-links">
+          <li><a href="mailto:info@medeco.io">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 株式会社Medeco. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+        <a href="mailto:info@medeco.io">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top-btn" aria-label="ページトップへ戻る">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/accessibility.js"></script>
+
+<script>
+  // TOCスクロールスパイ
+  (function() {
+    var sections = document.querySelectorAll('.detail-section[id], section[id]');
+    var tocItems = document.querySelectorAll('.toc-item');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          tocItems.forEach(function(item) { item.classList.remove('is-active'); });
+          var active = document.querySelector('.toc-item a[href="#' + entry.target.id + '"]');
+          if (active) active.parentElement.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+
+  // スクロールトップボタン
+  (function() {
+    var btn = document.getElementById('scroll-top-btn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) btn.classList.add('is-visible');
+      else btn.classList.remove('is-visible');
+    });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+
+</body>
+</html>

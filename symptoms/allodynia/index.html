@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="アロディニア（異痛症）— 通常は痛みを感じない刺激で痛みが生じる症状の説明・考えられる疾患・受診の目安。Medeco Navi。">
+  <title>アロディニア（異痛症）— 症状詳細 | Medeco Navi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <style>
+    .toc-item.is-active a { color: var(--color-primary); background: var(--color-primary-light); font-weight: var(--font-medium); }
+    #scroll-top-btn {
+      position: fixed; bottom: var(--space-6); right: var(--space-6);
+      width: 48px; height: 48px; background: var(--color-primary); color: #fff;
+      border-radius: var(--radius-full); display: flex; align-items: center;
+      justify-content: center; box-shadow: var(--shadow-lg); border: none; cursor: pointer;
+      opacity: 0; visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+      z-index: var(--z-sticky);
+    }
+    #scroll-top-btn.is-visible { opacity: 1; visibility: visible; }
+    #scroll-top-btn:hover { background: var(--color-primary-hover); }
+  </style>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1">
+        <input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力">
+        <span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      </div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../../index.html" class="header-logo" aria-label="Medeco Navi トップページ">
+        <span class="header-logo-text">Medeco <span>Navi</span></span>
+      </a>
+      <nav class="header-nav" aria-label="グローバルナビゲーション">
+        <a href="../../diseases/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる
+        </a>
+        <a href="../../symptoms/index.html" class="header-nav-item is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>症状から調べる
+        </a>
+        <a href="../../treatments/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>治療法から調べる
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-search-btn" data-search-open aria-label="検索を開く"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span>
+    <button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="../../diseases/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../../symptoms/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../../treatments/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <div class="emergency-banner" role="alert">
+    <strong>⚠️ 症状が重篤・急激に悪化している場合は、直ちに救急（119番）へ。</strong>
+    このサイトは医療診断ではありません。
+  </div>
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item"><a href="../../symptoms/index.html">症状から調べる</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">アロディニア（異痛症）</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="badge badge-danger">要注意</span>
+        <span class="badge badge-info">全身</span>
+        <span class="badge badge-neutral">痛み・感覚異常</span>
+        <div class="urgency-indicator urgency-high" style="margin-left:var(--space-2);">
+          <span class="urgency-dot"></span>
+          <span>早めの受診が必要</span>
+        </div>
+      </div>
+
+      <h1 class="page-hero-title">アロディニア（異痛症）</h1>
+      <p class="page-hero-description">
+        通常は痛みを引き起こさない軽い刺激（衣服の接触、そよ風、軽いなでなど）で強い痛みが生じる状態。神経障害性疼痛の特徴的症状であり、CRPS・帯状疱疹後神経痛・糖尿病性神経障害などで見られる。
+      </p>
+
+      <div class="alert alert-warning" style="margin-top:var(--space-5);max-width:720px;" role="note">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>
+          <strong>このページの情報について：</strong>
+          掲載内容はAIによる診断ではなく、一般的な医療情報の提供が目的です。実際の診断・治療は必ず医師が行います。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="detail-layout">
+
+      <article class="detail-main">
+
+        <nav class="toc" aria-label="このページの目次">
+          <p class="toc-title">目次</p>
+          <ol class="toc-list">
+            <li class="toc-item"><a href="#description">症状の説明</a></li>
+            <li class="toc-item"><a href="#red-flags">すぐに受診すべき場合</a></li>
+            <li class="toc-item"><a href="#related-diseases">考えられる主な疾患</a></li>
+            <li class="toc-item"><a href="#self-care">セルフケア・応急処置</a></li>
+            <li class="toc-item"><a href="#when-to-visit">受診の目安</a></li>
+          </ol>
+        </nav>
+
+        <section id="description" class="detail-section">
+          <h2 class="detail-section-title">症状の説明</h2>
+          <p>アロディニア（異痛症）とは、健康な人では痛みを感じない刺激に対して、著しい痛みを感じてしまう状態です。たとえば、肌に軽く触れる衣服、穏やかな風、わずかな温度変化などが強い痛みのトリガーになります。</p>
+
+          <h3 style="margin-top:var(--space-5);font-size:var(--text-lg);color:var(--color-text);">アロディニアの種類</h3>
+          <div style="display:grid;gap:var(--space-3);margin-top:var(--space-3);">
+            <div style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-md);border-left:4px solid var(--color-primary);">
+              <strong>機械的アロディニア（触覚性）</strong>
+              <p style="margin:var(--space-1) 0 0;font-size:var(--text-sm);color:var(--color-text-secondary);">軽い接触・衣服の摩擦・毛布の重さなどで痛みが誘発される</p>
+            </div>
+            <div style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-md);border-left:4px solid var(--color-warning);">
+              <strong>熱的アロディニア（温度性）</strong>
+              <p style="margin:var(--space-1) 0 0;font-size:var(--text-sm);color:var(--color-text-secondary);">ぬるい水・軽い冷気など通常は痛みを生じない温度変化で痛みが誘発される</p>
+            </div>
+            <div style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-md);border-left:4px solid var(--color-danger);">
+              <strong>動的アロディニア</strong>
+              <p style="margin:var(--space-1) 0 0;font-size:var(--text-sm);color:var(--color-text-secondary);">なでる・こするなどの動的刺激で痛みが誘発される</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top:var(--space-5);font-size:var(--text-lg);color:var(--color-text);">発生メカニズム</h3>
+          <p>アロディニアは神経の中枢感作（中枢性感作）が主要な原因です。脊髄後角のニューロンが過剰興奮状態になり、本来は痛み信号を伝えないAβ線維（触覚線維）の刺激も痛みとして処理されます。慢性化すると脳の痛み処理回路そのものが変容し、より治療が困難になります。</p>
+        </section>
+
+        <section id="red-flags" class="detail-section">
+          <h2 class="detail-section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            すぐに受診すべき場合
+          </h2>
+          <div class="alert alert-danger" role="alert">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div><strong>以下の症状がある場合は緊急受診・119番が必要です</strong></div>
+          </div>
+          <div style="display:grid;gap:var(--space-3);margin-top:var(--space-4);">
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-danger);background:var(--color-danger-light,#fff5f5);">🚨 急速に広がる皮膚の赤み・腫れ・高熱を伴うアロディニア（壊死性筋膜炎の可能性）</div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-danger);background:var(--color-danger-light,#fff5f5);">🚨 片側の顔・腕・脚の脱力とともに現れた場合（脳卒中の可能性）</div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-danger);background:var(--color-danger-light,#fff5f5);">🚨 激しい頭痛・意識障害とともに現れた場合</div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-warning);background:var(--color-warning-light,#fffbf0);">⚠️ 外傷・骨折後の四肢に急激に広がるアロディニア（CRPS初期の可能性）</div>
+            <div style="padding:var(--space-4);border-left:4px solid var(--color-warning);background:var(--color-warning-light,#fffbf0);">⚠️ 軽い刺激で全身的な過敏反応・アナフィラキシー様症状がある場合</div>
+          </div>
+        </section>
+
+        <section id="related-diseases" class="detail-section">
+          <h2 class="detail-section-title">考えられる主な疾患</h2>
+          <div style="display:grid;gap:var(--space-3);">
+            <a href="../../diseases/crps/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:var(--color-danger-light,#fff5f5);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🔥</div>
+              <div><strong>複合性局所疼痛症候群（CRPS）</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">アロディニアがBudapest診断基準の中心的所見。早期治療が重要。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="../../diseases/postherpetic-neuralgia/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:var(--color-warning-light,#fffbf0);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">⚡</div>
+              <div><strong>帯状疱疹後神経痛（PHN）</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">皮疹治癒後も衣服の接触で激痛が起きる接触性アロディニアが典型的。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="../../diseases/neuropathic-pain/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:var(--color-primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🧠</div>
+              <div><strong>神経障害性疼痛（総論）</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">アロディニアは神経障害性疼痛の定義的症状の一つ。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="../../diseases/diabetic-neuropathy/index.html" class="card-link" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);">
+              <div style="width:40px;height:40px;background:var(--color-bg-alt);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">💉</div>
+              <div><strong>糖尿病性神経障害</strong><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:var(--space-1) 0 0;">足底のアロディニアが靴の着用困難をもたらすことがある。</p></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-muted)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </section>
+
+        <section id="self-care" class="detail-section">
+          <h2 class="detail-section-title">セルフケア・応急処置</h2>
+          <div class="alert alert-warning" role="note">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+            <div><strong>注意：</strong> アロディニアは自己治療が困難な症状です。以下はあくまで一時的な症状緩和策であり、根本治療には専門医の診察が必要です。</div>
+          </div>
+          <ul style="margin-top:var(--space-4);display:grid;gap:var(--space-3);">
+            <li><strong>刺激を避ける衣服の選択：</strong>柔らかい天然素材（綿・シルク）を選び、縫い目や締め付けを最小化する。</li>
+            <li><strong>温度管理：</strong>熱的アロディニアがある場合は、急激な温度変化を避け、適度な室温を保つ。</li>
+            <li><strong>ストレス管理：</strong>ストレスは痛みの感受性を高める。リラクゼーション法（深呼吸・瞑想）が補助的に有効な場合がある。</li>
+            <li><strong>睡眠の確保：</strong>睡眠不足は中枢感作を悪化させる。睡眠環境を整える（保護的なパッドやカバーの使用など）。</li>
+            <li><strong>市販薬の限界：</strong>一般的な鎮痛薬（アセトアミノフェン・NSAIDs）はアロディニアに対してほとんど効果がない。</li>
+          </ul>
+        </section>
+
+        <section id="when-to-visit" class="detail-section">
+          <h2 class="detail-section-title">受診の目安</h2>
+          <div style="display:grid;gap:var(--space-4);">
+            <div class="alert alert-danger" role="alert">
+              <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+              <div><strong>緊急（119番または救急受診）：</strong>意識障害・急速に広がる炎症・脳卒中様症状を伴う場合</div>
+            </div>
+            <div class="alert alert-warning" role="note">
+              <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg>
+              <div><strong>早めに受診（数日以内）：</strong>外傷・骨折後にアロディニアが出現した場合（CRPS早期診断が重要）、帯状疱疹後に皮疹が治っても痛みが続く場合</div>
+            </div>
+            <div class="alert alert-success" role="note">
+              <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <div><strong>予約受診（ペインクリニック・神経内科）：</strong>慢性的にアロディニアがある場合は、神経障害性疼痛の専門的評価・治療が必要です。</div>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+      <aside class="detail-sidebar">
+
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">緊急度</h3>
+          <div class="urgency-indicator urgency-high" style="font-size:var(--text-sm);padding:var(--space-3);">
+            <span class="urgency-dot"></span>
+            <span>早めの受診が必要</span>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-2);">アロディニアは神経障害性疼痛の重要なサインです。特にCRPS・外傷後は早期診断が予後を左右します。</p>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">関連する疾患</h3>
+          <ul style="list-style:none;display:grid;gap:var(--space-2);">
+            <li><a href="../../diseases/crps/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 複合性局所疼痛症候群（CRPS）</a></li>
+            <li><a href="../../diseases/postherpetic-neuralgia/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 帯状疱疹後神経痛</a></li>
+            <li><a href="../../diseases/neuropathic-pain/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 神経障害性疼痛</a></li>
+            <li><a href="../../diseases/diabetic-neuropathy/index.html" style="color:var(--color-primary);text-decoration:none;font-size:var(--text-sm);">→ 糖尿病性神経障害</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">関連する治療法</h3>
+          <ul style="list-style:none;display:grid;gap:var(--space-2);font-size:var(--text-sm);">
+            <li><a href="../../treatments/spinal-cord-stimulation/index.html" style="color:var(--color-primary);text-decoration:none;">→ 脊髄刺激療法（SCS）</a></li>
+            <li><span style="color:var(--color-text-secondary);">神経ブロック療法</span></li>
+            <li><span style="color:var(--color-text-secondary);">薬物療法（プレガバリン・三環系抗うつ薬）</span></li>
+            <li><span style="color:var(--color-text-secondary);">心理療法・認知行動療法</span></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget" style="background:var(--color-danger);color:#fff;border-radius:var(--radius-lg);">
+          <h3 style="color:#fff;font-size:var(--text-base);margin-bottom:var(--space-2);">🚨 緊急の場合</h3>
+          <p style="font-size:var(--text-sm);margin-bottom:var(--space-3);">急激な症状悪化・意識障害・呼吸困難がある場合はすぐに救急へ。</p>
+          <a href="tel:119" style="display:block;background:#fff;color:var(--color-danger);text-align:center;padding:var(--space-2) var(--space-4);border-radius:var(--radius-md);font-weight:var(--font-bold);text-decoration:none;">119番に電話する</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・家族のための医療情報ナビゲーション。</p>
+      </div>
+      <div>
+        <p class="footer-col-title">疾患から調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">疾患一覧</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">症状から調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../symptoms/index.html">症状一覧</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">治療法から調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../treatments/index.html">治療一覧</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2024 Medeco Navi. 本サイトは医療診断を行うものではありません。</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top-btn" aria-label="ページトップへ戻る">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../../assets/js/search.js"></script>
+<script>
+(function(){
+  var btn = document.getElementById('scroll-top-btn');
+  window.addEventListener('scroll', function(){ btn.classList.toggle('is-visible', window.scrollY > 300); });
+  btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+  var tocItems = document.querySelectorAll('.toc-item');
+  var sections = Array.from(document.querySelectorAll('.detail-section'));
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 120;
+    var cur = sections.filter(function(s){ return s.offsetTop <= pos; }).pop();
+    tocItems.forEach(function(t){ t.classList.remove('is-active'); });
+    if(cur){ var a = document.querySelector('.toc-item a[href="#'+cur.id+'"]'); if(a) a.closest('.toc-item').classList.add('is-active'); }
+  });
+})();
+</script>
+</body>
+</html>

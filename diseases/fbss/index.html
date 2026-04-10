@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="脊椎術後疼痛症候群（FBSS）— 原因・症状・診断・治療法をわかりやすく解説。Medeco Navi。">
+  <title>脊椎術後疼痛症候群（FBSS）— 疾患詳細 | Medeco Navi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <style>
+    /* 目次のアクティブ項目 */
+    .toc-item.is-active a {
+      color: var(--color-primary);
+      background: var(--color-primary-light);
+      font-weight: var(--font-medium);
+    }
+    #scroll-top-btn {
+      position: fixed;
+      bottom: var(--space-6);
+      right: var(--space-6);
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+      z-index: var(--z-sticky);
+    }
+    #scroll-top-btn.is-visible { opacity: 1; visibility: visible; }
+    #scroll-top-btn:hover { background: var(--color-primary-hover); }
+  </style>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+
+<!-- 検索オーバーレイ -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1">
+        <input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力">
+        <span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      </div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- ヘッダー -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../../index.html" class="header-logo" aria-label="Medeco Navi トップページ">
+        <span class="header-logo-text">Medeco <span>Navi</span></span>
+      </a>
+      <nav class="header-nav" aria-label="グローバルナビゲーション">
+        <a href="../../diseases/index.html" class="header-nav-item is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          疾患から調べる
+        </a>
+        <a href="../../symptoms/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          症状から調べる
+        </a>
+        <a href="../../treatments/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+          治療法から調べる
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-search-btn" data-search-open aria-label="検索を開く">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- モバイルメニュー -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span>
+    <button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="../../diseases/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../../symptoms/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../../treatments/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item"><a href="../../diseases/index.html">疾患から調べる</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">脊椎術後疼痛症候群（FBSS）</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="badge badge-neutral">神経系</span>
+        <span class="badge badge-primary">慢性疼痛</span>
+        <span class="badge badge-primary">術後合併症</span>
+        <span class="badge badge-primary">難治性疼痛</span>
+      </div>
+
+      <h1 class="page-hero-title">脊椎術後疼痛症候群（FBSS）</h1>
+      <p class="page-hero-description">
+        腰椎手術後も痛みが改善せず、または増悪・再発する難治性の慢性疼痛症候群。
+        手術の「失敗」ではなく、手術自体は成功していても症状が持続する状態を指します。
+        腰椎手術を受けた患者の10〜40%に発症するとされています。
+      </p>
+      <p class="page-hero-updated">最終更新：2025年4月</p>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div class="container">
+    <div class="detail-layout">
+
+      <!-- メインカラム -->
+      <article class="detail-main">
+
+        <!-- 目次 -->
+        <nav class="toc" aria-label="このページの目次">
+          <p class="toc-title">目次</p>
+          <ol class="toc-list">
+            <li class="toc-item"><a href="#overview">概要</a></li>
+            <li class="toc-item"><a href="#causes">原因・リスク因子</a></li>
+            <li class="toc-item"><a href="#symptoms">主な症状</a></li>
+            <li class="toc-item"><a href="#diagnosis">診断方法</a></li>
+            <li class="toc-item"><a href="#treatment">治療法</a></li>
+            <li class="toc-item"><a href="#daily-life">生活上の注意点</a></li>
+            <li class="toc-item"><a href="#faq">よくある質問</a></li>
+            <li class="toc-item"><a href="#related">関連疾患</a></li>
+          </ol>
+        </nav>
+
+        <!-- 概要 -->
+        <section class="detail-section" id="overview" aria-labelledby="overview-title">
+          <h2 class="detail-section-title" id="overview-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            概要
+          </h2>
+          <p>
+            脊椎術後疼痛症候群（FBSS：Failed Back Surgery Syndrome）とは、腰椎手術を受けた後も腰・臀部・下肢の痛みが改善しないか、または一時的に改善した後に再燃・増悪する慢性疼痛状態です。
+          </p>
+          <p style="margin-top:var(--space-4);">
+            「Failed（失敗した）」という名称ですが、手術自体の技術的な失敗を意味するわけではありません。手術は適切に行われていても、複合的な要因によって痛みが持続・再発する状態を指します。
+            腰椎手術（椎間板ヘルニア手術・脊柱管狭窄症手術など）を受けた患者の約10〜40%に発症するとされており、難治性疼痛の代表的な疾患の一つです。
+          </p>
+
+          <div class="alert alert-info" style="margin-top:var(--space-6);" role="note">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div>
+              <strong>FBSSの定義</strong><br>
+              腰椎手術後に発症した慢性疼痛で、手術部位または手術と関連した部位（下肢など）に持続する疼痛が存在する状態。国際的にはFailed Back Surgery Syndromeの頭文字を取りFBSSと呼ばれます。
+            </div>
+          </div>
+        </section>
+
+        <!-- 原因・リスク因子 -->
+        <section class="detail-section" id="causes" aria-labelledby="causes-title">
+          <h2 class="detail-section-title" id="causes-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            原因・リスク因子
+          </h2>
+          <p>
+            FBSSは単一の原因ではなく、複数の要因が絡み合って発症します。主な原因を以下に示します。
+          </p>
+
+          <ul style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4);">
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">1</span>
+              <div><strong>神経の瘢痕化・線維化</strong>：手術後に神経周囲に瘢痕組織（線維組織）が形成され、神経を圧迫・絞扼することで痛みが生じます。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">2</span>
+              <div><strong>椎間板の再ヘルニア</strong>：手術で除去した椎間板組織が再び脱出し、神経を圧迫することがあります。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">3</span>
+              <div><strong>隣接椎間の変性</strong>：手術した椎間の上下の椎間板に負荷が集中し、変性・狭窄が進行します（隣接椎間障害）。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">4</span>
+              <div><strong>神経感作（中枢感作・末梢感作）</strong>：慢性的な痛み刺激によって神経系が過敏になり、通常では痛みを感じない刺激でも痛みとして認識するようになります。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">5</span>
+              <div><strong>脊柱不安定性</strong>：手術後の脊柱の安定性が損なわれ、動作時に痛みが増強します。</div>
+            </li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+              <span style="background:var(--color-primary-light);color:var(--color-primary);border-radius:var(--radius-full);width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:var(--font-bold);flex-shrink:0;margin-top:2px;">6</span>
+              <div><strong>心理社会的因子</strong>：術前からの抑うつ・不安・破局化思考（痛みに対する過度な否定的解釈）はFBSSの発症リスクを高め、痛みの慢性化に関与します。</div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 主な症状 -->
+        <section class="detail-section" id="symptoms" aria-labelledby="symptoms-title">
+          <h2 class="detail-section-title" id="symptoms-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            主な症状
+          </h2>
+          <p>
+            FBSSの症状は神経障害性疼痛の性質を持ちます。腰部から臀部・下肢にかけての痛みが中心で、日常生活に大きな影響を与えます。
+          </p>
+
+          <ul style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-2);">
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>腰・臀部・下肢への持続痛および放散痛（脚への痛みの広がり）</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>灼熱感・焼けるような痛みや電撃様の神経障害性疼痛</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>動作時の痛みの増悪（歩行・立位・前屈などで悪化）</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>睡眠障害（夜間の痛みによる不眠）</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>下肢のしびれ・感覚異常</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-warning);">●</span>
+              <span>抑うつ・不安・生活の質（QOL）の著しい低下</span>
+            </li>
+          </ul>
+
+          <div class="alert alert-danger" style="margin-top:var(--space-6);" role="alert">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div>
+              <strong>すぐに医療機関を受診してください</strong><br>
+              排尿・排便の障害（尿が出ない・漏れる、便失禁など）が新たに出現した場合は、馬尾症候群などの重篤な状態の可能性があります。直ちに受診してください。
+            </div>
+          </div>
+        </section>
+
+        <!-- 診断方法 -->
+        <section class="detail-section" id="diagnosis" aria-labelledby="diagnosis-title">
+          <h2 class="detail-section-title" id="diagnosis-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            診断方法
+          </h2>
+          <p>
+            FBSSの診断は、手術歴の確認と現在の症状の評価を組み合わせて行います。原因の特定と痛みの性質の把握が治療方針の決定に重要です。
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4);">
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>MRI・CT検査</strong>：神経の圧迫・瘢痕形成・再ヘルニア・隣接椎間変性などを画像で評価します。造影MRIは瘢痕と再ヘルニアの鑑別に有用です。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>神経ブロックによる診断的治療</strong>：特定の神経へのブロック注射を行い、その後の痛みの変化から痛みの発生源を特定します（診断と治療を兼ねます）。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>疼痛専門医による評価</strong>：NRS（数値評価スケール）や疼痛日記を用いて痛みの強さ・部位・性質を定量的に評価します。神経障害性疼痛スクリーニング（DN4など）も行われます。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>心理社会的評価</strong>：抑うつ・不安・破局化思考などの心理的因子を評価し、治療計画に組み込みます。PHQ-9やPCS（Pain Catastrophizing Scale）などが使用されます。
+            </div>
+          </div>
+        </section>
+
+        <!-- 治療法 -->
+        <section class="detail-section" id="treatment" aria-labelledby="treatment-title">
+          <h2 class="detail-section-title" id="treatment-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+            治療法
+          </h2>
+          <p>
+            FBSSの治療は多角的アプローチが重要です。薬物療法、インターベンション（脊髄刺激療法・神経ブロック）、リハビリテーション、心理療法を組み合わせます。
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:var(--space-4);margin-top:var(--space-6);">
+            <div style="background:var(--color-bg-alt);padding:var(--space-5);border-radius:var(--radius-lg);border-left:4px solid var(--color-primary);">
+              <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-2);">薬物療法</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);">神経障害性疼痛薬（プレガバリン・ガバペンチン・デュロキセチン・三環系抗うつ薬）を中心に使用します。オピオイド鎮痛薬は適切な管理のもとで選択されることがあります。NSAIDsは神経障害性疼痛には効果が乏しいです。</p>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-5);border-radius:var(--radius-lg);border-left:4px solid var(--color-primary);">
+              <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-2);">脊髄刺激療法（SCS）</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);">脊髄に微弱な電気刺激を与えて痛みの伝達を抑制する治療法です。薬物療法で効果不十分なFBSSに対して保険適用があり、複数の臨床試験で薬物療法と比較した高い有効性が報告されています。FBSSに対する最も確立された侵襲的治療の一つです。</p>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-5);border-radius:var(--radius-lg);border-left:4px solid var(--color-primary);">
+              <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-2);">リハビリテーション</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);">体幹筋強化・姿勢矯正・疼痛教育（ペインニューロサイエンス教育）を組み合わせたリハビリテーションが行われます。過度な安静は痛みを悪化させるため、適切な活動性の維持が重要です。</p>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-5);border-radius:var(--radius-lg);border-left:4px solid var(--color-primary);">
+              <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-2);">心理療法</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);">認知行動療法（CBT）やマインドフルネスに基づくストレス低減法（MBSR）が、FBSSに伴う抑うつ・不安・破局化思考の改善に有効です。集学的疼痛治療プログラムの一環として提供されます。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 生活上の注意点 -->
+        <section class="detail-section" id="daily-life" aria-labelledby="daily-title">
+          <h2 class="detail-section-title" id="daily-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            生活上の注意点
+          </h2>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-4);">
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">適度な活動の維持</strong><br>
+              過度な安静は筋力低下・廃用・うつを招き、痛みを悪化させます。痛みと相談しながら、ウォーキングや水中歩行など低負荷の運動を継続しましょう。「痛みがあっても動けること」を目標にリハビリを進めることが大切です。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">心理的サポートの活用</strong><br>
+              慢性疼痛は精神的な消耗を引き起こします。抑うつや不安を感じたら、疼痛専門医や心理士に相談しましょう。痛みの「破局化（最悪の事態を想定する思考）」を修正することで、痛みの感じ方が変わることがあります。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">痛み専門クリニックへの受診</strong><br>
+              FBSSは一般的な整形外科や内科では対応が難しい場合があります。ペインクリニック（疼痛専門外来）や集学的疼痛センターへの受診を積極的に検討しましょう。適切な専門医への紹介を求めることも大切です。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">痛みの記録と共有</strong><br>
+              疼痛日記（痛みの強さ・部位・日常生活への影響を記録）をつけ、受診時に医師と共有することで、治療の効果判定と方針決定に役立ちます。
+            </li>
+          </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="detail-section" id="faq" aria-labelledby="faq-title">
+          <h2 class="detail-section-title" id="faq-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            よくある質問
+          </h2>
+
+          <div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>手術が「失敗」したということですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  FBSSは手術失敗を意味しません。手術自体は技術的に成功していても、複合的な要因（神経感作・瘢痕化・心理社会的因子など）により痛みが持続することがあります。「Failed Back Surgery Syndrome」という名称は歴史的なもので、現在は「腰椎術後症候群」や「術後慢性疼痛」とも呼ばれます。執刀した医師の責任や過失を意味するものではありません。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>脊髄刺激療法（SCS）とは何ですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  脊髄刺激療法（SCS：Spinal Cord Stimulation）は、脊髄の硬膜外腔に電極を留置し、微弱な電気刺激を与えることで痛みの伝達を抑制する治療法です。まずトライアル（試験刺激）を行い、効果を確認してから植込み型のシステムを埋め込む手順で行われます。薬物療法で効果不十分なFBSSに対して日本でも保険適用があり、複数の臨床試験で薬物療法と比べて高い有効性（痛みの50%以上の軽減）が報告されています。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>再手術を受けるべきですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  FBSSに対する再手術は、MRIなどで明確な神経圧迫の原因（再ヘルニアや隣接椎間変性など）が確認された場合に限り検討されます。原因が明確でない場合や神経感作が主因の場合、再手術では改善が期待できないどころか悪化することもあります。疼痛専門医への相談なしに再手術を判断することは避けましょう。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>どの科を受診すればよいですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  ペインクリニック（麻酔科・疼痛科）や脊椎専門の整形外科への受診をお勧めします。FBSSは多職種による集学的治療が有効なため、医師・理学療法士・心理士が連携した集学的疼痛センターへの紹介が最善の場合もあります。かかりつけ医に専門機関への紹介状を依頼することも一つの方法です。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 関連疾患 -->
+        <section id="related" aria-labelledby="related-title">
+          <h2 class="detail-section-title" id="related-title" style="border-bottom:2px solid var(--color-primary-light);padding-bottom:var(--space-3);margin-bottom:var(--space-5);">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            関連疾患
+          </h2>
+          <div class="scroll-card-list" role="list" aria-label="関連疾患">
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/neuropathic-pain/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">⚡</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">神経障害性疼痛</h3>
+                <p class="card-summary">神経系の損傷・機能障害による難治性の痛み。FBSSの痛みの主要なメカニズム。</p>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/spinal-canal-stenosis/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">🦴</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">脊柱管狭窄症</h3>
+                <p class="card-summary">腰椎手術の主要な対象疾患。FBSSの原因疾患となりうる。</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 参考情報 -->
+        <div style="margin-top:var(--space-8);padding:var(--space-5);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-bottom:var(--space-2);font-weight:var(--font-bold);text-transform:uppercase;">参考情報</p>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-1);">
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">Kumar K, et al. "Spinal cord stimulation versus conventional medical management for neuropathic pain." Pain, 2007.</li>
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">日本ペインクリニック学会「神経障害性疼痛薬物療法ガイドライン 改訂第2版」</li>
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">NICE guidelines: Spinal cord stimulation for chronic pain of neuropathic or ischaemic origin</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- サイドバー -->
+      <aside class="detail-sidebar" aria-label="関連情報">
+
+        <!-- 重要度 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">重要度</p>
+          <div class="urgency-indicator urgency-medium">
+            <span class="urgency-dot"></span>
+            <span>専門医への受診が必要</span>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-2);">ペインクリニック・疼痛専門医による集学的治療が推奨されます</p>
+        </div>
+
+        <!-- 関連症状 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する症状</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/back-pain/index.html">
+                <span>🔥</span>腰痛
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/leg-pain/index.html">
+                <span>⚡</span>下肢の痛み・放散痛
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/numbness/index.html">
+                <span>😣</span>しびれ・感覚異常
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/sleep-disorder/index.html">
+                <span>😴</span>睡眠障害
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 関連治療法 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する治療法</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="../../treatments/spinal-cord-stimulation/index.html">
+                <span>⚡</span>脊髄刺激療法（SCS）
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../treatments/pain-management/index.html">
+                <span>💊</span>疼痛管理・鎮痛療法
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../treatments/rehabilitation/index.html">
+                <span>🏃</span>リハビリテーション
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="sidebar-widget" style="background:var(--color-primary-light);border:1px solid var(--color-primary);">
+          <p class="sidebar-widget-title" style="color:var(--color-primary);">慢性疼痛にお悩みの方へ</p>
+          <p style="font-size:var(--text-sm);color:var(--color-text-sub);line-height:var(--leading-loose);margin-bottom:var(--space-3);">
+            FBSSなど難治性の慢性疼痛でお困りの方は、疼痛専門医への受診をご検討ください。Medecoでは疼痛専門医との連携をサポートしています。
+          </p>
+          <a href="mailto:info@medeco.io" class="btn btn-primary" style="width:100%;text-align:center;display:block;">
+            Medecoに相談する
+          </a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section style="padding:var(--space-12) 0;background:var(--color-bg-alt);">
+    <div class="container">
+      <div class="cta-section">
+        <p style="font-size:32px;margin-bottom:var(--space-3);" aria-hidden="true">👨‍⚕️</p>
+        <h2 class="cta-title">気になることは、まず医師に相談を</h2>
+        <p class="cta-description">
+          このページの情報はあくまでも参考です。<br>
+          実際の診断・治療の判断は、必ず医師にご相談ください。
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;">
+          <a href="../../diseases/index.html" class="btn btn-outline">他の疾患を調べる</a>
+          <a href="../../treatments/index.html" class="btn btn-primary">治療法を調べる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 医療免責事項 -->
+  <div class="disclaimer-bar" role="note" aria-label="医療免責事項">
+    <div class="container">
+      <p>このサイトは情報提供を目的としており、医療診断・治療の代替となるものではありません。症状がある場合は必ず医療機関を受診してください。</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・ご家族のための疾患情報ポータル。</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);">運営：<a href="https://medeco.io/index.html" target="_blank" rel="noopener noreferrer" style="color:inherit;">株式会社Medeco</a></p>
+      </div>
+      <div>
+        <p class="footer-col-title">調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">疾患から調べる</a></li>
+          <li><a href="../../symptoms/index.html">症状から調べる</a></li>
+          <li><a href="../../treatments/index.html">治療法から調べる</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">疾患カテゴリ</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">循環器系</a></li>
+          <li><a href="../../diseases/index.html">神経系</a></li>
+          <li><a href="../../diseases/index.html">運動器系</a></li>
+          <li><a href="../../diseases/index.html">がん領域</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">サポート</p>
+        <ul class="footer-links">
+          <li><a href="mailto:info@medeco.io">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 株式会社Medeco. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+        <a href="mailto:info@medeco.io">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top-btn" aria-label="ページトップへ戻る">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/accessibility.js"></script>
+
+<script>
+  // 目次アクティブ状態の制御
+  (function() {
+    const tocItems = document.querySelectorAll('.toc-item');
+    const sections = document.querySelectorAll('.detail-section, section[id]');
+    function updateToc() {
+      let current = '';
+      sections.forEach(function(section) {
+        const top = section.getBoundingClientRect().top;
+        if (top <= 120) current = section.id;
+      });
+      tocItems.forEach(function(item) {
+        const link = item.querySelector('a');
+        if (link && link.getAttribute('href') === '#' + current) {
+          item.classList.add('is-active');
+        } else {
+          item.classList.remove('is-active');
+        }
+      });
+    }
+    window.addEventListener('scroll', updateToc, { passive: true });
+    updateToc();
+
+    // スクロールトップボタン
+    const scrollBtn = document.getElementById('scroll-top-btn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        scrollBtn.classList.add('is-visible');
+      } else {
+        scrollBtn.classList.remove('is-visible');
+      }
+    }, { passive: true });
+    scrollBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+
+</body>
+</html>

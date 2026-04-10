@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="症状から調べる — Medeco Navi。頭痛・めまい・胸痛など体の不調から、考えられる疾患や受診の目安を調べられます。">
+  <title>症状から調べる — Medeco Navi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+
+  <style>
+    .body-map-wrapper {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: var(--space-8);
+      align-items: start;
+    }
+
+    .body-svg-figure {
+      position: sticky;
+      top: 88px;
+    }
+
+    .body-svg-figure svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .body-part-btn {
+      cursor: pointer;
+      transition: fill var(--transition-fast), opacity var(--transition-fast);
+    }
+
+    .body-part-btn:hover { opacity: 0.75; }
+    .body-part-btn.is-active { fill: var(--color-primary) !important; }
+
+    @media (max-width: 767px) {
+      .body-map-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .body-svg-figure {
+        position: static;
+        display: flex;
+        justify-content: center;
+      }
+      .body-svg-figure svg {
+        width: 160px;
+      }
+    }
+    #scroll-top-btn {
+      position: fixed; bottom: var(--space-6); right: var(--space-6);
+      width: 48px; height: 48px; background: var(--color-primary); color: #fff;
+      border-radius: var(--radius-full); display: flex; align-items: center;
+      justify-content: center; box-shadow: var(--shadow-lg); border: none; cursor: pointer;
+      opacity: 0; visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+      z-index: var(--z-sticky);
+    }
+    #scroll-top-btn.is-visible { opacity: 1; visibility: visible; }
+    #scroll-top-btn:hover { background: var(--color-primary-hover); }
+  </style>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+
+<!-- 検索オーバーレイ -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1">
+        <input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力">
+        <span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      </div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- ヘッダー -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo" aria-label="Medeco Navi トップページ">
+        <span class="header-logo-text">Medeco <span>Navi</span></span>
+      </a>
+      <nav class="header-nav" aria-label="グローバルナビゲーション">
+        <a href="../diseases/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          疾患から調べる
+        </a>
+        <a href="../symptoms/index.html" class="header-nav-item is-active" aria-current="page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          症状から調べる
+        </a>
+        <a href="../treatments/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+          治療法から調べる
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-search-btn" data-search-open aria-label="検索を開く">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- モバイルメニュー -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span>
+    <button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="../diseases/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../symptoms/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../treatments/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="mailto:info@medeco.io" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>お問い合わせ</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- 緊急バナー -->
+  <div class="emergency-banner" role="alert" aria-label="緊急受診のお知らせ">
+    <strong>⚠️ 症状が重篤な場合は、直ちに救急（119番）または近くの救急病院を受診してください。</strong>
+    このサイトの情報は医療診断の代替ではありません。
+  </div>
+
+  <!-- ページヘッダー -->
+  <div class="list-page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">症状から調べる</span>
+      </nav>
+      <h1 class="list-page-title">
+        <span aria-hidden="true">🩺</span> 症状から調べる
+      </h1>
+      <p class="list-page-description">
+        体の不調・気になる症状から、考えられる疾患や受診の目安を調べられます。
+        <br><strong>※ このサイトはAIによる診断ではなく、情報提供を目的としています。</strong>
+      </p>
+      <div class="list-controls">
+        <div class="search-form" role="search">
+          <input type="search" id="symptom-search" class="search-input" placeholder="症状名で検索（例：頭痛、めまい）" autocomplete="off" aria-label="症状名で検索">
+          <span class="search-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 免責注意 -->
+  <div style="background:#FEF2F2;border-bottom:1px solid #FECACA;padding:var(--space-3) 0;">
+    <div class="container">
+      <p style="font-size:var(--text-sm);color:#991B1B;text-align:center;">
+        <strong>重要：</strong> このページの症状情報は医療診断ではありません。緊急性のある症状（胸痛・麻痺・意識障害など）はすぐに救急受診してください。
+      </p>
+    </div>
+  </div>
+
+  <!-- 身体部位マップ + フィルター -->
+  <div style="background:var(--color-bg);border-bottom:1px solid var(--color-border);padding:var(--space-6) 0;">
+    <div class="container">
+      <div class="body-map-wrapper">
+
+        <!-- 身体部位SVGマップ -->
+        <figure class="body-svg-figure" aria-label="身体部位マップ（クリックで絞り込み）">
+          <figcaption class="sr-only">身体部位をクリックして症状を絞り込めます</figcaption>
+          <svg viewBox="0 0 120 280" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="身体部位マップ">
+            <!-- 頭部 -->
+            <ellipse cx="60" cy="28" rx="22" ry="26" fill="#E8EDF2" class="body-part-btn" data-part="頭部" tabindex="0" role="button" aria-label="頭部を選択">
+              <title>頭部</title>
+            </ellipse>
+            <!-- 首 -->
+            <rect x="52" y="52" width="16" height="14" rx="4" fill="#D5DCE3" class="body-part-btn" data-part="首" tabindex="0" role="button" aria-label="首を選択">
+              <title>首</title>
+            </rect>
+            <!-- 胸部 -->
+            <rect x="32" y="65" width="56" height="56" rx="8" fill="#E8EDF2" class="body-part-btn" data-part="胸部" tabindex="0" role="button" aria-label="胸部を選択">
+              <title>胸部</title>
+            </rect>
+            <!-- 腹部 -->
+            <rect x="34" y="120" width="52" height="44" rx="6" fill="#D5DCE3" class="body-part-btn" data-part="腹部" tabindex="0" role="button" aria-label="腹部を選択">
+              <title>腹部</title>
+            </rect>
+            <!-- 上肢（左） -->
+            <rect x="6" y="68" width="24" height="68" rx="8" fill="#E8EDF2" class="body-part-btn" data-part="上肢" tabindex="0" role="button" aria-label="上肢を選択">
+              <title>上肢</title>
+            </rect>
+            <!-- 上肢（右） -->
+            <rect x="90" y="68" width="24" height="68" rx="8" fill="#E8EDF2" class="body-part-btn" data-part="上肢" tabindex="0" role="button" aria-label="上肢（右）を選択">
+              <title>上肢</title>
+            </rect>
+            <!-- 下肢（左） -->
+            <rect x="34" y="163" width="22" height="96" rx="8" fill="#D5DCE3" class="body-part-btn" data-part="下肢" tabindex="0" role="button" aria-label="下肢を選択">
+              <title>下肢</title>
+            </rect>
+            <!-- 下肢（右） -->
+            <rect x="64" y="163" width="22" height="96" rx="8" fill="#D5DCE3" class="body-part-btn" data-part="下肢" tabindex="0" role="button" aria-label="下肢（右）を選択">
+              <title>下肢</title>
+            </rect>
+            <!-- ラベル -->
+            <text x="60" y="30" text-anchor="middle" font-size="8" fill="#6C7580" font-family="sans-serif">頭</text>
+            <text x="60" y="97" text-anchor="middle" font-size="8" fill="#6C7580" font-family="sans-serif">胸</text>
+            <text x="60" y="145" text-anchor="middle" font-size="8" fill="#6C7580" font-family="sans-serif">腹</text>
+            <text x="18" y="105" text-anchor="middle" font-size="7" fill="#6C7580" font-family="sans-serif">腕</text>
+            <text x="102" y="105" text-anchor="middle" font-size="7" fill="#6C7580" font-family="sans-serif">腕</text>
+            <text x="45" y="215" text-anchor="middle" font-size="7" fill="#6C7580" font-family="sans-serif">脚</text>
+            <text x="75" y="215" text-anchor="middle" font-size="7" fill="#6C7580" font-family="sans-serif">脚</text>
+          </svg>
+        </figure>
+
+        <!-- フィルターパネル -->
+        <div>
+          <div style="margin-bottom:var(--space-4);">
+            <p style="font-size:var(--text-xs);font-weight:var(--font-bold);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:var(--space-2);">部位で絞り込み</p>
+            <div class="filter-chip-group filter-bar" data-filter-group="symptom-body-part" role="group" aria-label="身体部位で絞り込み">
+              <button class="filter-chip is-active" data-value="all">すべて</button>
+              <button class="filter-chip" data-value="頭部" data-filter-group="symptom-body-part">頭部</button>
+              <button class="filter-chip" data-value="胸部" data-filter-group="symptom-body-part">胸部</button>
+              <button class="filter-chip" data-value="腹部" data-filter-group="symptom-body-part">腹部</button>
+              <button class="filter-chip" data-value="上肢" data-filter-group="symptom-body-part">上肢（腕・手）</button>
+              <button class="filter-chip" data-value="下肢" data-filter-group="symptom-body-part">下肢（脚・足）</button>
+              <button class="filter-chip" data-value="全身" data-filter-group="symptom-body-part">全身</button>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size:var(--text-xs);font-weight:var(--font-bold);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:var(--space-2);">症状カテゴリ</p>
+            <div class="filter-chip-group filter-bar" data-filter-group="symptom-category" role="group" aria-label="症状カテゴリで絞り込み">
+              <button class="filter-chip is-active" data-value="all">すべて</button>
+              <button class="filter-chip" data-value="痛み">痛み</button>
+              <button class="filter-chip" data-value="神経症状">神経症状</button>
+              <button class="filter-chip" data-value="呼吸器症状">呼吸器症状</button>
+              <button class="filter-chip" data-value="消化器症状">消化器症状</button>
+              <button class="filter-chip" data-value="全身症状">全身症状</button>
+              <button class="filter-chip" data-value="泌尿器症状">泌尿器症状</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 症状一覧 -->
+  <section style="padding:var(--space-8) 0 var(--space-16);" aria-labelledby="symptom-list-title">
+    <div class="container">
+      <p class="list-result-count" id="symptom-count" aria-live="polite" aria-atomic="true">読み込み中...</p>
+      <div id="symptom-list" class="grid-auto" role="list" aria-label="症状一覧">
+        <div class="skeleton" style="height:180px;border-radius:var(--radius-xl);" aria-hidden="true"></div>
+        <div class="skeleton" style="height:180px;border-radius:var(--radius-xl);" aria-hidden="true"></div>
+        <div class="skeleton" style="height:180px;border-radius:var(--radius-xl);" aria-hidden="true"></div>
+        <div class="skeleton" style="height:180px;border-radius:var(--radius-xl);" aria-hidden="true"></div>
+        <div class="skeleton" style="height:180px;border-radius:var(--radius-xl);" aria-hidden="true"></div>
+        <div class="skeleton" style="height:180px;border-radius:var(--radius-xl);" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 医療免責事項 -->
+  <div class="disclaimer-bar" role="note" aria-label="医療免責事項">
+    <div class="container">
+      <p>このサイトは情報提供を目的としており、医療診断の代替となるものではありません。症状がある場合は必ず医療機関を受診してください。重篤な症状は今すぐ救急へ。</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・ご家族のための疾患情報ポータル。</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);">運営：<a href="https://medeco.io/index.html" target="_blank" rel="noopener noreferrer" style="color:inherit;">株式会社Medeco</a></p>
+      </div>
+      <div>
+        <p class="footer-col-title">調べる</p>
+        <ul class="footer-links">
+          <li><a href="../diseases/index.html">疾患から調べる</a></li>
+          <li><a href="../symptoms/index.html">症状から調べる</a></li>
+          <li><a href="../treatments/index.html">治療法から調べる</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">症状カテゴリ</p>
+        <ul class="footer-links">
+          <li><a href="../symptoms/index.html">頭部の症状</a></li>
+          <li><a href="../symptoms/index.html">胸部の症状</a></li>
+          <li><a href="../symptoms/index.html">腹部の症状</a></li>
+          <li><a href="../symptoms/index.html">全身の症状</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">サポート</p>
+        <ul class="footer-links">
+          <li><a href="mailto:info@medeco.io">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 株式会社Medeco. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+        <a href="mailto:info@medeco.io">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top-btn" aria-label="ページトップへ戻る">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/search.js"></script>
+<script src="../assets/js/accessibility.js"></script>
+
+</body>
+</html>

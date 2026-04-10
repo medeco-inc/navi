@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="降圧薬治療 — 治療の概要・流れ・副作用・注意点。Medeco Navi。">
+  <title>降圧薬治療 — 治療法詳細 | Medeco Navi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <style>
+    .toc-item.is-active a { color: var(--color-primary); background: var(--color-primary-light); font-weight: var(--font-medium); }
+    #scroll-top-btn {
+      position: fixed; bottom: var(--space-6); right: var(--space-6);
+      width: 48px; height: 48px; background: var(--color-primary); color: #fff;
+      border-radius: var(--radius-full); display: flex; align-items: center;
+      justify-content: center; box-shadow: var(--shadow-lg); border: none; cursor: pointer;
+      opacity: 0; visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+      z-index: var(--z-sticky);
+    }
+    #scroll-top-btn.is-visible { opacity: 1; visibility: visible; }
+    #scroll-top-btn:hover { background: var(--color-primary-hover); }
+  </style>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+
+<!-- 検索オーバーレイ -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1">
+        <input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力">
+        <span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      </div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- ヘッダー -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../../index.html" class="header-logo" aria-label="Medeco Navi トップページ">
+        <span class="header-logo-text">Medeco <span>Navi</span></span>
+      </a>
+      <nav class="header-nav" aria-label="グローバルナビゲーション">
+        <a href="../../diseases/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる
+        </a>
+        <a href="../../symptoms/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>症状から調べる
+        </a>
+        <a href="../../treatments/index.html" class="header-nav-item is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>治療法から調べる
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-search-btn" data-search-open aria-label="検索を開く"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- モバイルメニュー -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span>
+    <button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="../../diseases/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../../symptoms/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../../treatments/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item"><a href="../../treatments/index.html">治療法から調べる</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">降圧薬治療</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="badge badge-primary">薬物療法</span>
+        <span class="badge badge-neutral">継続治療</span>
+      </div>
+
+      <h1 class="page-hero-title">降圧薬治療</h1>
+      <p class="page-hero-description">
+        血圧を下げる薬を服用して血圧をコントロールする治療法です。
+        ARB・ACE阻害薬・カルシウム拮抗薬・利尿薬など複数の種類があり、病態・合併症・副作用を考慮して選択されます。
+      </p>
+      <p class="page-hero-updated">最終更新：2025年4月</p>
+    </div>
+  </div>
+
+  <!-- コンテンツ -->
+  <div class="container">
+    <div class="detail-layout">
+
+      <article class="detail-main">
+
+        <!-- 目次 -->
+        <nav class="toc" aria-label="このページの目次">
+          <p class="toc-title">目次</p>
+          <ol class="toc-list">
+            <li class="toc-item"><a href="#overview">概要・目的</a></li>
+            <li class="toc-item"><a href="#flow">治療の流れ</a></li>
+            <li class="toc-item"><a href="#effects">期待される効果</a></li>
+            <li class="toc-item"><a href="#side-effects">副作用・リスク</a></li>
+            <li class="toc-item"><a href="#daily-life">治療前後の注意点</a></li>
+            <li class="toc-item"><a href="#faq">よくある質問</a></li>
+            <li class="toc-item"><a href="#target-diseases">対象となる主な疾患</a></li>
+          </ol>
+        </nav>
+
+        <!-- 概要・目的 -->
+        <section class="detail-section" id="overview" aria-labelledby="overview-title">
+          <h2 class="detail-section-title" id="overview-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            概要・目的
+          </h2>
+          <p>
+            降圧薬治療とは、高血圧症に対して薬物を使って血圧を目標値まで下げ、維持する治療法です。
+            血圧を適切にコントロールすることで、心臓病・脳卒中・腎臓病などの合併症を予防することが主な目的です。
+          </p>
+          <p style="margin-top:var(--space-4);">
+            生活習慣改善だけでは目標血圧に達しない場合や、すでに合併症がある場合、リスクが高い場合に薬物療法が開始されます。
+          </p>
+
+          <h3 style="margin-top:var(--space-6);margin-bottom:var(--space-4);font-size:var(--text-lg);">主な降圧薬の種類</h3>
+          <div style="overflow-x:auto;">
+            <table class="data-table" aria-label="降圧薬の種類一覧">
+              <thead>
+                <tr>
+                  <th>薬剤クラス</th>
+                  <th>主な特徴・適応</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>ARB（アンジオテンシンII受容体拮抗薬）</strong></td>
+                  <td>腎保護作用あり。糖尿病・腎臓病合併に特に有効</td>
+                </tr>
+                <tr>
+                  <td><strong>ACE阻害薬</strong></td>
+                  <td>ARBと同様の機序。咳の副作用に注意</td>
+                </tr>
+                <tr>
+                  <td><strong>カルシウム拮抗薬（Ca拮抗薬）</strong></td>
+                  <td>高齢者・降圧効果が強い。日本人に多く使用</td>
+                </tr>
+                <tr>
+                  <td><strong>利尿薬</strong></td>
+                  <td>心不全合併例・むくみに有効。低カリウムに注意</td>
+                </tr>
+                <tr>
+                  <td><strong>β遮断薬</strong></td>
+                  <td>頻脈・狭心症合併例に有効。喘息には禁忌</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 治療の流れ -->
+        <section class="detail-section" id="flow" aria-labelledby="flow-title">
+          <h2 class="detail-section-title" id="flow-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            治療の流れ
+          </h2>
+
+          <div class="steps" role="list">
+            <div class="step" role="listitem">
+              <div class="step-number" aria-label="ステップ1">1</div>
+              <div class="step-content">
+                <h3 class="step-title">診察・血圧評価</h3>
+                <p class="step-description">
+                  医師が血圧の状態・合併症・リスク因子を評価します。血液検査・尿検査・心電図なども行い、最適な薬の種類を選択します。
+                </p>
+              </div>
+            </div>
+            <div class="step" role="listitem">
+              <div class="step-number" aria-label="ステップ2">2</div>
+              <div class="step-content">
+                <h3 class="step-title">処方・服薬開始</h3>
+                <p class="step-description">
+                  1種類の降圧薬から開始することが多いです。少量から始め、効果を見ながら増量します。毎日決まった時間に服用することが重要です。
+                </p>
+              </div>
+            </div>
+            <div class="step" role="listitem">
+              <div class="step-number" aria-label="ステップ3">3</div>
+              <div class="step-content">
+                <h3 class="step-title">定期受診・効果確認</h3>
+                <p class="step-description">
+                  開始後2〜4週間ごとに受診し、血圧値・副作用を確認します。必要に応じて薬の種類・量の調整、追加が行われます。
+                </p>
+              </div>
+            </div>
+            <div class="step" role="listitem">
+              <div class="step-number" aria-label="ステップ4">4</div>
+              <div class="step-content">
+                <h3 class="step-title">目標血圧の達成・維持</h3>
+                <p class="step-description">
+                  目標血圧（多くの場合130/80mmHg未満）に達したら、安定後は2〜3ヵ月ごとの定期受診で継続管理します。
+                  血圧が安定しても自己判断での服薬中断は避けてください。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 期待される効果 -->
+        <section class="detail-section" id="effects" aria-labelledby="effects-title">
+          <h2 class="detail-section-title" id="effects-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            期待される効果
+          </h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-4);">
+            <div style="text-align:center;padding:var(--space-5);background:var(--color-bg-alt);border-radius:var(--radius-xl);">
+              <div style="font-size:36px;margin-bottom:var(--space-2);" aria-hidden="true">🫀</div>
+              <strong>心臓病の予防</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">心筋梗塞・心不全のリスクを低減</p>
+            </div>
+            <div style="text-align:center;padding:var(--space-5);background:var(--color-bg-alt);border-radius:var(--radius-xl);">
+              <div style="font-size:36px;margin-bottom:var(--space-2);" aria-hidden="true">🧠</div>
+              <strong>脳卒中の予防</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">脳梗塞・脳出血リスクを低減</p>
+            </div>
+            <div style="text-align:center;padding:var(--space-5);background:var(--color-bg-alt);border-radius:var(--radius-xl);">
+              <div style="font-size:36px;margin-bottom:var(--space-2);" aria-hidden="true">💧</div>
+              <strong>腎臓の保護</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">慢性腎臓病の進行を抑制</p>
+            </div>
+            <div style="text-align:center;padding:var(--space-5);background:var(--color-bg-alt);border-radius:var(--radius-xl);">
+              <div style="font-size:36px;margin-bottom:var(--space-2);" aria-hidden="true">👁️</div>
+              <strong>目の保護</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">高血圧性網膜症の予防</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 副作用・リスク -->
+        <section class="detail-section" id="side-effects" aria-labelledby="side-title">
+          <h2 class="detail-section-title" id="side-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            副作用・リスク
+          </h2>
+          <p style="margin-bottom:var(--space-5);color:var(--color-text-sub);">
+            降圧薬の副作用は薬の種類によって異なります。副作用が気になる場合は自己判断で中断せず、必ず医師に相談してください。
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div style="padding:var(--space-4);background:#FFFBEB;border:1px solid #FDE68A;border-radius:var(--radius-lg);">
+              <strong>めまい・立ちくらみ（起立性低血圧）</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">血圧が下がりすぎる場合や、急に立ち上がった際に起こることがあります。ゆっくり立ち上がる習慣をつけましょう。</p>
+            </div>
+            <div style="padding:var(--space-4);background:#FFFBEB;border:1px solid #FDE68A;border-radius:var(--radius-lg);">
+              <strong>咳（ACE阻害薬に多い）</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">乾いた咳が続く場合はARBへの変更を医師に相談できます。</p>
+            </div>
+            <div style="padding:var(--space-4);background:#FFFBEB;border:1px solid #FDE68A;border-radius:var(--radius-lg);">
+              <strong>頻尿・電解質異常（利尿薬）</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">定期的な血液検査でカリウム・ナトリウムを確認します。</p>
+            </div>
+            <div style="padding:var(--space-4);background:#FFFBEB;border:1px solid #FDE68A;border-radius:var(--radius-lg);">
+              <strong>下肢のむくみ（一部のCa拮抗薬）</strong>
+              <p style="font-size:var(--text-sm);color:var(--color-text-sub);margin-top:var(--space-1);">足首のむくみが気になる場合は医師に相談してください。</p>
+            </div>
+          </div>
+
+          <div class="alert alert-info" style="margin-top:var(--space-5);" role="note">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div>副作用が疑われる場合も、<strong>自己判断で服薬を中断しないでください。</strong>急激な血圧上昇のリスクがあります。必ず医師・薬剤師に相談してください。</div>
+          </div>
+        </section>
+
+        <!-- 治療前後の注意点 -->
+        <section class="detail-section" id="daily-life" aria-labelledby="daily-title">
+          <h2 class="detail-section-title" id="daily-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            治療前後の生活上の注意点
+          </h2>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-4);">
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">🕐 毎日決まった時間に服用</strong><br>
+              朝食後・就寝前など、医師・薬剤師の指示に従って毎日継続してください。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">🍊 グレープフルーツに注意</strong><br>
+              一部のCa拮抗薬はグレープフルーツジュースと相互作用があります。服用中は控えるか、医師に確認してください。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">🌡️ 家庭血圧の記録</strong><br>
+              毎朝と就寝前に血圧を測定・記録し、受診時に持参してください。薬の調整に役立ちます。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">💊 他の薬・サプリとの相互作用</strong><br>
+              市販薬（NSAIDs・かぜ薬）やサプリメントが降圧薬と相互作用する場合があります。新たな薬を使用する際は医師・薬剤師に相談を。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">🧂 生活習慣改善との併用</strong><br>
+              薬物療法中も減塩・適度な運動・禁煙などの生活習慣改善を継続することで、より少ない薬量でのコントロールが可能になります。
+            </li>
+          </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="detail-section" id="faq" aria-labelledby="faq-title">
+          <h2 class="detail-section-title" id="faq-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            よくある質問
+          </h2>
+
+          <div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>飲み忘れたらどうすればよいですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  気づいた時に飲んでください。ただし、次の服用時間が近い場合（2〜4時間以内）は1回飛ばし、次の時間から再開してください。2回分をまとめて飲むことは避けてください。薬の種類によって対応が異なるため、薬剤師や処方箋の指示を確認してください。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>血圧が下がったら薬をやめてもよいですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  自己判断での中断は危険です。血圧が下がっているのは薬の効果であり、中断すると再び上昇することがほとんどです。薬の減量・中断を検討する場合は、必ず医師に相談してください。生活習慣改善が十分にできている場合は、医師の判断のもと減薬できることがあります。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>妊娠中でも降圧薬を飲み続けてよいですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  ARB・ACE阻害薬は妊娠中には使用できません。妊娠が判明した場合は直ちに担当医に連絡し、指示を仰いでください。妊娠高血圧症候群に対して安全に使える降圧薬があります。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>ジェネリック薬（後発医薬品）でも効果は同じですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  有効成分・用量は同等であることが国の基準で定められています。価格が安く、経済的負担を軽減できます。ただし添加物・剤形が異なる場合があるため、アレルギーなどの懸念がある方は薬剤師に相談してください。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 対象疾患 -->
+        <section id="target-diseases" aria-labelledby="target-title">
+          <h2 class="detail-section-title" id="target-title" style="border-bottom:2px solid var(--color-primary-light);padding-bottom:var(--space-3);margin-bottom:var(--space-5);">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            この治療法が対象となる主な疾患
+          </h2>
+          <div class="scroll-card-list" role="list">
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/hypertension/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">🫀</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">高血圧症</h3>
+                <p class="card-summary">降圧薬の最も主要な適応疾患</p>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/heart-failure/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">💓</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">心不全</h3>
+                <p class="card-summary">ACE阻害薬・ARBが心不全の標準治療</p>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/chronic-kidney-disease/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">💧</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">慢性腎臓病</h3>
+                <p class="card-summary">ARBが腎保護に有効</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+      <!-- サイドバー -->
+      <aside class="detail-sidebar" aria-label="関連情報">
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">治療概要</p>
+          <dl style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div>
+              <dt style="font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.05em;">カテゴリ</dt>
+              <dd style="font-size:var(--text-sm);font-weight:var(--font-medium);margin-top:2px;"><span class="badge badge-primary">薬物療法</span></dd>
+            </div>
+            <div>
+              <dt style="font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.05em;">治療期間</dt>
+              <dd style="font-size:var(--text-sm);font-weight:var(--font-medium);margin-top:2px;">継続治療（長期）</dd>
+            </div>
+            <div>
+              <dt style="font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.05em;">通院頻度</dt>
+              <dd style="font-size:var(--text-sm);font-weight:var(--font-medium);margin-top:2px;">安定後：2〜3ヵ月に1回</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する疾患</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item"><a href="../../diseases/hypertension/index.html"><span>🫀</span>高血圧症</a></li>
+            <li class="sidebar-list-item"><a href="../../diseases/heart-failure/index.html"><span>💓</span>心不全</a></li>
+            <li class="sidebar-list-item"><a href="../../diseases/chronic-kidney-disease/index.html"><span>💧</span>慢性腎臓病</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する治療法</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item"><a href="../../treatments/lifestyle-modification/index.html"><span>🥗</span>生活習慣改善</a></li>
+            <li class="sidebar-list-item"><a href="../../treatments/cardiac-rehabilitation/index.html"><span>🏃</span>心臓リハビリテーション</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section style="padding:var(--space-12) 0;background:var(--color-bg-alt);">
+    <div class="container">
+      <div class="cta-section">
+        <p style="font-size:32px;margin-bottom:var(--space-3);" aria-hidden="true">👨‍⚕️</p>
+        <h2 class="cta-title">治療について、まず主治医にご相談を</h2>
+        <p class="cta-description">
+          治療法の選択は、あなたの病態・体質・生活状況によって異なります。<br>
+          このページの情報を参考に、ぜひ主治医や薬剤師に質問してみてください。
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;">
+          <a href="../../treatments/index.html" class="btn btn-outline">他の治療法を調べる</a>
+          <a href="../../diseases/index.html" class="btn btn-primary">疾患を調べる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer-bar" role="note">
+    <div class="container">
+      <p>このサイトは情報提供を目的としており、医療診断・治療の代替ではありません。治療法の選択は必ず主治医とご相談ください。</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・ご家族のための疾患情報ポータル。</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);">運営：<a href="https://medeco.io/index.html" target="_blank" rel="noopener noreferrer" style="color:inherit;">株式会社Medeco</a></p>
+      </div>
+      <div>
+        <p class="footer-col-title">調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">疾患から調べる</a></li>
+          <li><a href="../../symptoms/index.html">症状から調べる</a></li>
+          <li><a href="../../treatments/index.html">治療法から調べる</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">治療カテゴリ</p>
+        <ul class="footer-links">
+          <li><a href="../../treatments/index.html">薬物療法</a></li>
+          <li><a href="../../treatments/index.html">外科手術</a></li>
+          <li><a href="../../treatments/index.html">リハビリ</a></li>
+          <li><a href="../../treatments/index.html">生活療法</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">サポート</p>
+        <ul class="footer-links">
+          <li><a href="mailto:info@medeco.io">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 株式会社Medeco. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+        <a href="mailto:info@medeco.io">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top-btn" aria-label="ページトップへ戻る">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/accessibility.js"></script>
+
+</body>
+</html>

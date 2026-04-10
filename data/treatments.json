@@ -1,0 +1,169 @@
+{
+  "treatments": [
+    {
+      "id": "spinal-cord-stimulation",
+      "name": "脊髄刺激療法（SCS）",
+      "category": "外科手術",
+      "targetDiseases": ["fbss", "neuropathic-pain", "postherpetic-neuralgia", "spinal-canal-stenosis", "diabetic-neuropathy", "post-stroke-pain", "brachial-plexus-injury", "crps"],
+      "summary": "脊髄の近くに電極を留置し、微弱な電気刺激によって慢性疼痛を軽減する治療法。薬物療法で効果不十分な難治性慢性疼痛に適応される。",
+      "duration": "試験刺激（1〜2週間）→本植込み（長期）",
+      "sideEffects": ["感染リスク", "リードの位置ずれ", "刺激感（ピリピリ感）", "機器の故障"],
+      "relatedSymptoms": ["burning-electric-pain", "leg-numbness-radiating-pain", "allodynia", "intermittent-claudication"],
+      "hasPage": true
+    },
+    {
+      "id": "antihypertensive-drugs",
+      "name": "降圧薬治療",
+      "category": "薬物療法",
+      "targetDiseases": ["hypertension", "heart-failure", "chronic-kidney-disease"],
+      "summary": "血圧を下げる薬を服用して血圧をコントロールする治療法。ARB・ACE阻害薬・カルシウム拮抗薬など複数の種類がある。",
+      "duration": "継続治療",
+      "sideEffects": ["めまい・立ちくらみ", "頻尿（利尿薬使用時）", "咳（ACE阻害薬使用時）", "下肢浮腫（一部の薬）"],
+      "relatedSymptoms": ["dizziness", "edema"],
+      "hasPage": false
+    },
+    {
+      "id": "lifestyle-modification",
+      "name": "生活習慣改善",
+      "category": "生活療法",
+      "targetDiseases": ["hypertension", "diabetes", "osteoporosis", "depression", "chronic-kidney-disease"],
+      "summary": "食事・運動・睡眠・禁煙など生活習慣を整えることで疾患の治療・予防を行う。薬物療法と並行して行う場合が多い。",
+      "duration": "継続",
+      "sideEffects": [],
+      "relatedSymptoms": ["fatigue", "edema"],
+      "hasPage": false
+    },
+    {
+      "id": "diabetes-medication",
+      "name": "糖尿病治療薬",
+      "category": "薬物療法",
+      "targetDiseases": ["diabetes"],
+      "summary": "血糖値を下げる薬を服用する治療。内服薬には様々な種類があり（メトホルミン・SGLT2阻害薬・DPP-4阻害薬など）、病態に合わせて選択。",
+      "duration": "継続治療",
+      "sideEffects": ["低血糖（一部の薬）", "体重増加（一部の薬）", "消化器症状（メトホルミン）"],
+      "relatedSymptoms": ["frequent-urination", "fatigue"],
+      "hasPage": false
+    },
+    {
+      "id": "insulin-therapy",
+      "name": "インスリン療法",
+      "category": "薬物療法",
+      "targetDiseases": ["diabetes"],
+      "summary": "インスリンを注射で補充し血糖値をコントロールする治療。1型糖尿病では必須。2型でも経口薬で効果が不十分な場合に使用。",
+      "duration": "継続治療",
+      "sideEffects": ["低血糖", "注射部位の皮膚変化", "体重増加"],
+      "relatedSymptoms": ["fatigue"],
+      "hasPage": false
+    },
+    {
+      "id": "inhaled-corticosteroids",
+      "name": "吸入ステロイド薬",
+      "category": "薬物療法",
+      "targetDiseases": ["asthma"],
+      "summary": "気道の炎症を抑える吸入薬。喘息の長期管理の基本薬で、毎日使用することで発作を予防する。即効性はなく、継続使用が重要。",
+      "duration": "継続治療",
+      "sideEffects": ["口腔内カンジダ症（うがいで予防）", "嗄声（かすれ声）"],
+      "relatedSymptoms": ["cough", "shortness-of-breath"],
+      "hasPage": false
+    },
+    {
+      "id": "bronchodilator",
+      "name": "気管支拡張薬",
+      "category": "薬物療法",
+      "targetDiseases": ["asthma"],
+      "summary": "気管支を広げて呼吸を楽にする薬。発作時に使う短時間作用型と、予防目的の長時間作用型がある。吸入・内服・貼付タイプがある。",
+      "duration": "症状に応じて",
+      "sideEffects": ["動悸・手の震え（β2刺激薬）", "口の渇き（抗コリン薬）"],
+      "relatedSymptoms": ["shortness-of-breath", "cough"],
+      "hasPage": false
+    },
+    {
+      "id": "pain-management",
+      "name": "疼痛管理・鎮痛療法",
+      "category": "薬物療法",
+      "targetDiseases": ["migraine", "lumbar-disc-herniation", "rheumatoid-arthritis"],
+      "summary": "痛みを和らげるための治療。NSAIDs・アセトアミノフェン・オピオイドなど段階的に使用。神経ブロック注射や理学療法と組み合わせることも。",
+      "duration": "症状に応じて",
+      "sideEffects": ["胃腸障害（NSAIDs）", "眠気（オピオイド）", "依存性（一部の薬）"],
+      "relatedSymptoms": ["headache", "back-pain", "joint-pain"],
+      "hasPage": false
+    },
+    {
+      "id": "migraine-treatment",
+      "name": "片頭痛治療",
+      "category": "薬物療法",
+      "targetDiseases": ["migraine"],
+      "summary": "片頭痛発作の急性期治療（トリプタン製剤・鎮痛薬）と予防薬治療がある。発作の早期に服用することが効果的。",
+      "duration": "症状に応じて・予防は継続",
+      "sideEffects": ["眠気（予防薬）", "血管収縮（トリプタン）", "悪心"],
+      "relatedSymptoms": ["headache", "nausea"],
+      "hasPage": false
+    },
+    {
+      "id": "rehabilitation",
+      "name": "リハビリテーション",
+      "category": "リハビリ",
+      "targetDiseases": ["lumbar-disc-herniation", "rheumatoid-arthritis", "stroke", "heart-failure"],
+      "summary": "運動療法・物理療法・作業療法などを組み合わせて機能回復・維持を図る治療。専門のリハビリスタッフが個別プログラムを作成。",
+      "duration": "疾患・状態による",
+      "sideEffects": ["過負荷による一時的な痛みの増悪（通常は一過性）"],
+      "relatedSymptoms": ["back-pain", "joint-pain", "numbness"],
+      "hasPage": false
+    },
+    {
+      "id": "surgical-resection",
+      "name": "外科的切除術",
+      "category": "外科手術",
+      "targetDiseases": ["colorectal-cancer"],
+      "summary": "がん病変を外科的に切除する治療。腹腔鏡手術・ロボット支援手術など低侵襲な手術も普及。病期・部位によって術式が決まる。",
+      "duration": "入院期間1〜2週間程度",
+      "sideEffects": ["術後感染", "縫合不全", "排便機能への影響（直腸がんの場合）", "術後疼痛"],
+      "relatedSymptoms": ["abdominal-pain"],
+      "hasPage": false
+    },
+    {
+      "id": "chemotherapy",
+      "name": "化学療法（抗がん薬治療）",
+      "category": "化学療法",
+      "targetDiseases": ["colorectal-cancer"],
+      "summary": "抗がん薬を使ってがん細胞の増殖を抑える治療。手術前後の補助化学療法や、転移・再発時の治療として使用。外来で行える場合も多い。",
+      "duration": "疾患・レジメンによる",
+      "sideEffects": ["悪心・嘔吐", "脱毛（薬剤による）", "骨髄抑制（感染リスク上昇）", "末梢神経障害", "疲労感"],
+      "relatedSymptoms": ["fatigue", "nausea"],
+      "hasPage": false
+    },
+    {
+      "id": "radiation-therapy",
+      "name": "放射線治療",
+      "category": "放射線治療",
+      "targetDiseases": ["colorectal-cancer"],
+      "summary": "放射線を照射してがん細胞を破壊する治療。直腸がんでは術前照射も行われる。正常組織への影響を最小化する高精度放射線治療も普及。",
+      "duration": "通常4〜6週間",
+      "sideEffects": ["照射部位の皮膚炎", "疲労感", "局所の炎症症状"],
+      "relatedSymptoms": ["fatigue"],
+      "hasPage": false
+    },
+    {
+      "id": "cardiac-rehabilitation",
+      "name": "心臓リハビリテーション",
+      "category": "リハビリ",
+      "targetDiseases": ["heart-failure"],
+      "summary": "心疾患患者の運動耐容能改善・再発予防・QOL向上を目的とした包括的なリハビリプログラム。医師・理学療法士・看護師などチームで実施。",
+      "duration": "外来リハビリ継続",
+      "sideEffects": ["過負荷による心事故リスク（医療監視下で実施するため安全性は高い）"],
+      "relatedSymptoms": ["shortness-of-breath", "fatigue"],
+      "hasPage": false
+    },
+    {
+      "id": "psychotherapy",
+      "name": "心理療法・カウンセリング",
+      "category": "生活療法",
+      "targetDiseases": ["depression"],
+      "summary": "認知行動療法（CBT）・対人関係療法などの心理療法。うつ病・不安障害の治療に有効。薬物療法と組み合わせることで効果が高まる。",
+      "duration": "12〜20セッション程度（週1回）",
+      "sideEffects": ["一時的な症状悪化（感情的な内容を扱う場合）"],
+      "relatedSymptoms": ["insomnia", "fatigue"],
+      "hasPage": false
+    }
+  ]
+}

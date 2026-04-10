@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="神経障害性疼痛（Neuropathic Pain）— 原因・症状・診断・治療法をわかりやすく解説。Medeco Navi。">
+  <title>神経障害性疼痛 — 疾患詳細 | Medeco Navi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/design-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <style>
+    /* 目次のアクティブ項目 */
+    .toc-item.is-active a {
+      color: var(--color-primary);
+      background: var(--color-primary-light);
+      font-weight: var(--font-medium);
+    }
+    #scroll-top-btn {
+      position: fixed;
+      bottom: var(--space-6);
+      right: var(--space-6);
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+      z-index: var(--z-sticky);
+    }
+    #scroll-top-btn.is-visible { opacity: 1; visibility: visible; }
+    #scroll-top-btn:hover { background: var(--color-primary-hover); }
+  </style>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+
+<!-- 検索オーバーレイ -->
+<div id="search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="サイト内検索" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-header">
+      <div class="search-form" style="flex:1">
+        <input type="search" id="search-overlay-input" class="search-input" placeholder="疾患名・症状・治療法を検索..." autocomplete="off" aria-label="検索キーワードを入力">
+        <span class="search-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+      </div>
+      <button class="search-overlay-close" aria-label="検索を閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="search-overlay-results" class="search-overlay-results" role="region" aria-label="検索結果" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- ヘッダー -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../../index.html" class="header-logo" aria-label="Medeco Navi トップページ">
+        <span class="header-logo-text">Medeco <span>Navi</span></span>
+      </a>
+      <nav class="header-nav" aria-label="グローバルナビゲーション">
+        <a href="../../diseases/index.html" class="header-nav-item is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          疾患から調べる
+        </a>
+        <a href="../../symptoms/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          症状から調べる
+        </a>
+        <a href="../../treatments/index.html" class="header-nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+          治療法から調べる
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-search-btn" data-search-open aria-label="検索を開く">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- モバイルメニュー -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="header-logo-text">Medeco <span style="color:var(--color-primary)">Navi</span></span>
+    <button class="mobile-menu-close" aria-label="メニューを閉じる"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu-body">
+    <a href="../../diseases/index.html" class="mobile-nav-item is-active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>疾患から調べる</a>
+    <a href="../../symptoms/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>症状から調べる</a>
+    <a href="../../treatments/index.html" class="mobile-nav-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18"/></svg>治療法から調べる</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずナビゲーション">
+        <span class="breadcrumb-item"><a href="../../index.html">トップ</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item"><a href="../../diseases/index.html">疾患から調べる</a></span>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="breadcrumb-item breadcrumb-current">神経障害性疼痛</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="badge badge-neutral">神経系</span>
+        <span class="badge badge-primary">慢性疼痛</span>
+        <span class="badge badge-primary">神経障害</span>
+        <span class="badge badge-primary">難治性疼痛</span>
+      </div>
+
+      <h1 class="page-hero-title">神経障害性疼痛</h1>
+      <p class="page-hero-description">
+        神経系（末梢神経または中枢神経）の損傷や機能障害によって生じる痛み。
+        通常の炎症による痛みとはメカニズムが異なり、一般的な鎮痛剤が効きにくい難治性疼痛です。
+        IASPの定義では「体性感覚神経系の病変または疾患によって引き起こされる痛み」とされています。
+      </p>
+      <p class="page-hero-updated">最終更新：2025年4月</p>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div class="container">
+    <div class="detail-layout">
+
+      <!-- メインカラム -->
+      <article class="detail-main">
+
+        <!-- 目次 -->
+        <nav class="toc" aria-label="このページの目次">
+          <p class="toc-title">目次</p>
+          <ol class="toc-list">
+            <li class="toc-item"><a href="#overview">概要</a></li>
+            <li class="toc-item"><a href="#causes">原因・リスク因子</a></li>
+            <li class="toc-item"><a href="#symptoms">主な症状</a></li>
+            <li class="toc-item"><a href="#diagnosis">診断方法</a></li>
+            <li class="toc-item"><a href="#treatment">治療法</a></li>
+            <li class="toc-item"><a href="#daily-life">生活上の注意点</a></li>
+            <li class="toc-item"><a href="#faq">よくある質問</a></li>
+            <li class="toc-item"><a href="#related">関連疾患</a></li>
+          </ol>
+        </nav>
+
+        <!-- 概要 -->
+        <section class="detail-section" id="overview" aria-labelledby="overview-title">
+          <h2 class="detail-section-title" id="overview-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            概要
+          </h2>
+          <p>
+            神経障害性疼痛（Neuropathic Pain）とは、末梢神経または中枢神経（脊髄・脳）の損傷や機能障害によって引き起こされる慢性的な痛みです。
+            国際疼痛学会（IASP）は「体性感覚神経系の病変または疾患によって引き起こされる痛み」と定義しています。
+          </p>
+          <p style="margin-top:var(--space-4);">
+            通常の組織損傷（切り傷・打撲・炎症など）による「侵害受容性疼痛」とは根本的にメカニズムが異なります。
+            神経障害性疼痛では神経系そのものが障害されており、痛みを伝える「センサー」や「回路」が誤作動を起こしている状態です。
+            そのためNSAIDs（非ステロイド系抗炎症薬）などの一般的な鎮痛剤は効果が乏しく、治療に難渋することが多い難治性疼痛の一群です。
+          </p>
+
+          <div class="alert alert-info" style="margin-top:var(--space-6);" role="note">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div>
+              <strong>侵害受容性疼痛との違い</strong><br>
+              侵害受容性疼痛は組織損傷のシグナルが神経を通じて伝達される通常の痛み（骨折・捻挫など）。神経障害性疼痛は神経自体が障害されており、組織の損傷がなくても痛みが生じます。治療薬も異なります。
+            </div>
+          </div>
+        </section>
+
+        <!-- 原因・リスク因子 -->
+        <section class="detail-section" id="causes" aria-labelledby="causes-title">
+          <h2 class="detail-section-title" id="causes-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            原因・リスク因子
+          </h2>
+          <p>
+            神経障害性疼痛を引き起こす疾患・状態は多岐にわたります。大きく「末梢性」と「中枢性」に分類されます。
+          </p>
+
+          <h3 style="margin-top:var(--space-6);margin-bottom:var(--space-3);font-size:var(--text-lg);">末梢性神経障害性疼痛の原因</h3>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-2);margin-top:var(--space-3);">
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>糖尿病性ニューロパチー</strong>：糖尿病による神経障害。足先からの灼熱感・しびれが特徴。</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>帯状疱疹後神経痛（PHN）</strong>：帯状疱疹の治癒後も続く持続的な神経痛。</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>FBSS（脊椎術後疼痛症候群）</strong>：腰椎手術後の神経瘢痕などによる疼痛。</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>腕神経叢損傷</strong>：事故などによる神経損傷後の疼痛。</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>化学療法後神経障害</strong>：がん化学療法による末梢神経障害。</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>CRPS（複合性局所疼痛症候群）</strong>：外傷後などに生じる難治性疼痛。</span>
+            </li>
+          </ul>
+
+          <h3 style="margin-top:var(--space-6);margin-bottom:var(--space-3);font-size:var(--text-lg);">中枢性神経障害性疼痛の原因</h3>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-2);margin-top:var(--space-3);">
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>脊髄損傷</strong>：外傷・疾患による脊髄の損傷後に生じる慢性疼痛。</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>多発性硬化症（MS）</strong>：中枢神経の脱髄疾患に伴う疼痛。</span>
+            </li>
+            <li style="display:flex;gap:var(--space-2);align-items:center;">
+              <span style="color:var(--color-primary);">●</span>
+              <span><strong>脳卒中後疼痛（視床痛）</strong>：脳卒中後に発症する中枢性疼痛。</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 主な症状 -->
+        <section class="detail-section" id="symptoms" aria-labelledby="symptoms-title">
+          <h2 class="detail-section-title" id="symptoms-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            主な症状
+          </h2>
+          <p>
+            神経障害性疼痛の症状は独特で、通常の痛みとは質的に異なります。以下の症状が組み合わさって現れることが多く、生活の質を大きく損ないます。
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4);">
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>灼熱感・焼けるような痛み（burning pain）</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">皮膚が「焼けている」「熱湯をかけられたよう」と表現される持続的な灼熱痛。糖尿病性ニューロパチーや帯状疱疹後神経痛で典型的。</span>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>電撃痛・刺すような痛み（shooting/lancinating pain）</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">「電気が走る」「針で刺される」と表現される突発的・間欠的な鋭い痛み。一瞬で消えることもある。</span>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>アロディニア（allodynia：痛覚過敏）</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">通常では痛みを生じないはずの軽い刺激（衣服の接触・そよ風など）が激しい痛みとして感じられる状態。日常生活を著しく障害します。</span>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>感覚鈍麻と疼痛過敏の混在</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">しびれ・感覚低下（感覚鈍麻）と、わずかな刺激への過剰反応（痛覚過敏）が同じ部位に混在することがあります。</span>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>自発痛と夜間増悪</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">何も刺激がなくても続く痛み（自発痛）が特徴で、夜間に増悪することが多く、睡眠障害を引き起こします。</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 診断方法 -->
+        <section class="detail-section" id="diagnosis" aria-labelledby="diagnosis-title">
+          <h2 class="detail-section-title" id="diagnosis-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            診断方法
+          </h2>
+          <p>
+            神経障害性疼痛の診断は、詳細な問診・神経学的診察と、必要に応じた検査を組み合わせて行います。
+            疼痛の質・分布・増悪因子の把握が重要です。
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4);">
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>スクリーニング問診票（DN4スコアなど）</strong>：神経障害性疼痛の特徴的な症状（灼熱感・電撃痛・アロディニアなど）を点数化し、神経障害性疼痛の可能性を判定します。DN4スコアは7項目中4点以上で陽性とされます。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>NRS（数値評価スケール）による痛みの定量化</strong>：0（痛みなし）〜10（最大の痛み）で現在の痛みの強さを評価します。治療の効果判定にも使用されます。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>神経学的診察</strong>：感覚検査（触覚・温痛覚・振動覚）、腱反射、筋力評価で神経障害の分布と程度を確認します。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>神経伝導検査・筋電図</strong>：末梢神経の損傷部位と程度を客観的に評価します。糖尿病性ニューロパチーや絞扼性神経障害の診断に有用です。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>画像診断（MRI・CT）</strong>：原因疾患（脊椎病変・腫瘍・脳卒中など）の特定のために行います。神経障害性疼痛そのものは画像には映りません。
+            </div>
+          </div>
+        </section>
+
+        <!-- 治療法 -->
+        <section class="detail-section" id="treatment" aria-labelledby="treatment-title">
+          <h2 class="detail-section-title" id="treatment-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+            治療法
+          </h2>
+          <p>
+            神経障害性疼痛の治療は原因疾患の治療と、疼痛そのものへの対症療法の両方が重要です。
+            薬物療法を中心に、状況に応じてインターベンション（脊髄刺激療法など）や心理療法が組み合わせられます。
+          </p>
+
+          <h3 style="margin-top:var(--space-6);margin-bottom:var(--space-3);font-size:var(--text-lg);">第一選択薬</h3>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);border-left:4px solid var(--color-primary);">
+              <strong>プレガバリン・ガバペンチン（Ca²⁺チャネルα₂δリガンド）</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">神経障害性疼痛の第一選択薬。興奮性神経伝達物質の過剰放出を抑制します。副作用として眠気・ふらつき・浮腫があります。</span>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);border-left:4px solid var(--color-primary);">
+              <strong>SNRI（デュロキセチンなど）</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">セロトニン・ノルエピネフリン再取り込み阻害薬。下行性疼痛抑制系を活性化します。糖尿病性ニューロパチーへの適応あり。</span>
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);border-left:4px solid var(--color-primary);">
+              <strong>三環系抗うつ薬（アミトリプチリンなど）</strong><br>
+              <span style="font-size:var(--text-sm);color:var(--color-text-sub);">古くからある神経障害性疼痛薬。有効ですが副作用（口渇・眠気・心毒性）が多く、高齢者には注意が必要です。</span>
+            </div>
+          </div>
+
+          <h3 style="margin-top:var(--space-6);margin-bottom:var(--space-3);font-size:var(--text-lg);">その他の治療</h3>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>外用薬</strong>：リドカインテープ（帯状疱疹後神経痛など局所性の神経障害性疼痛に有効）、カプサイシンクリーム・パッチ（TRPV1受容体を脱感作）。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>脊髄刺激療法（SCS）</strong>：薬物療法で効果不十分な難治性の神経障害性疼痛（FBSSなど）に適応されます。複数の臨床研究で有効性が証明されています。
+            </div>
+            <div style="background:var(--color-bg-alt);padding:var(--space-4);border-radius:var(--radius-lg);">
+              <strong>神経ブロック</strong>：星状神経節ブロック・硬膜外ブロックなど、神経や神経節周囲に局所麻酔薬・ステロイドを注入して痛みを抑制します。
+            </div>
+          </div>
+        </section>
+
+        <!-- 生活上の注意点 -->
+        <section class="detail-section" id="daily-life" aria-labelledby="daily-title">
+          <h2 class="detail-section-title" id="daily-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            生活上の注意点
+          </h2>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-4);">
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">規則正しい生活・十分な睡眠</strong><br>
+              睡眠不足は痛みの感受性を高め、神経障害性疼痛を悪化させます。就寝・起床時間を規則正しく保ち、快眠環境を整えましょう。睡眠薬の使用が必要な場合は医師に相談してください。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">温度刺激への注意</strong><br>
+              神経障害性疼痛ではアロディニアにより、熱すぎ・冷たすぎの温度刺激が激しい痛みを引き起こすことがあります。入浴温度の調節（40〜41℃が目安）、冷え対策（靴下・手袋の活用）が重要です。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">心理的サポートの活用</strong><br>
+              慢性的な痛みは抑うつ・不安・社会的孤立を招きます。認知行動療法（CBT）や支持的心理療法が痛みへの対処能力（コーピング）を高めます。ひとりで抱え込まず、専門家に相談しましょう。
+            </li>
+            <li style="padding:var(--space-4);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+              <strong style="color:var(--color-primary);">原因疾患の管理</strong><br>
+              糖尿病性ニューロパチーであれば血糖コントロール、脊椎疾患であればリハビリなど、原因疾患の治療を継続することが神経障害性疼痛の悪化防止に重要です。
+            </li>
+          </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="detail-section" id="faq" aria-labelledby="faq-title">
+          <h2 class="detail-section-title" id="faq-title">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            よくある質問
+          </h2>
+
+          <div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>一般的な鎮痛剤（NSAIDs）は効きますか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  神経障害性疼痛は通常の炎症性疼痛とメカニズムが根本的に異なるため、NSAIDs（ロキソプロフェン・イブプロフェンなど）は効果が乏しいことが多いです。神経障害性疼痛には専用の薬剤（プレガバリン・ガバペンチン・SNRI・三環系抗うつ薬）が使用されます。市販の痛み止めが効かないと感じたら、医師に神経障害性疼痛の可能性について相談することをお勧めします。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>治ることはありますか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  原因疾患の治療（血糖コントロール・神経圧迫の解除など）によって改善する場合がありますが、神経障害性疼痛の多くは慢性化します。完全な治癒よりも「痛みをコントロールして生活の質（QOL）を向上させること」が現実的な治療目標です。適切な治療で多くの患者さんが日常生活を送れるレベルまで痛みを軽減できています。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>抗うつ薬が処方されましたが、うつ病ですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  神経障害性疼痛の治療に使用される三環系抗うつ薬（アミトリプチリンなど）やSNRI（デュロキセチンなど）は、うつ病の治療薬でもありますが、疼痛領域では抗うつ作用ではなく「下行性疼痛抑制系の活性化」という別のメカニズムで鎮痛効果を発揮します。うつ病と診断されたわけではありませんので、ご安心ください。用量もうつ病の治療より少量で使用されることが多いです。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>どんな科を受診すればよいですか？</span>
+                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  ペインクリニック（疼痛専門外来）、または原因疾患に応じて神経内科・整形外科・糖尿病内科などへの受診をお勧めします。「しびれ・灼熱感・電撃痛などの神経障害性疼痛の症状がある」ことを具体的に伝えてください。適切な専門科への紹介を依頼するためにもかかりつけ医への相談が第一歩です。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 関連疾患 -->
+        <section id="related" aria-labelledby="related-title">
+          <h2 class="detail-section-title" id="related-title" style="border-bottom:2px solid var(--color-primary-light);padding-bottom:var(--space-3);margin-bottom:var(--space-5);">
+            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            関連疾患
+          </h2>
+          <div class="scroll-card-list" role="list" aria-label="関連疾患">
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/fbss/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">🦴</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">FBSS（脊椎術後疼痛症候群）</h3>
+                <p class="card-summary">腰椎手術後の神経瘢痕などを原因とする難治性慢性疼痛。</p>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/postherpetic-neuralgia/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">🔥</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">帯状疱疹後神経痛</h3>
+                <p class="card-summary">帯状疱疹治癒後も続く神経障害性疼痛の代表的疾患。</p>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/diabetic-neuropathy/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">⚖️</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">糖尿病性ニューロパチー</h3>
+                <p class="card-summary">糖尿病による末梢神経障害。足先の灼熱感・しびれが特徴。</p>
+              </a>
+            </div>
+            <div class="scroll-card-item" role="listitem">
+              <a href="../../diseases/crps/index.html" class="card disease-card" style="text-decoration:none;color:inherit;">
+                <div class="card-icon" aria-hidden="true">⚡</div>
+                <h3 class="card-title" style="font-size:var(--text-base);">CRPS（複合性局所疼痛症候群）</h3>
+                <p class="card-summary">外傷後などに生じる難治性の神経障害性疼痛症候群。</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 参考情報 -->
+        <div style="margin-top:var(--space-8);padding:var(--space-5);background:var(--color-bg-alt);border-radius:var(--radius-lg);">
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-bottom:var(--space-2);font-weight:var(--font-bold);text-transform:uppercase;">参考情報</p>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-1);">
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">Treede RD, et al. "Neuropathic pain: redefinition and a grading system." Neurology, 2008.</li>
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">日本ペインクリニック学会「神経障害性疼痛薬物療法ガイドライン 改訂第2版」2016年</li>
+            <li style="font-size:var(--text-sm);color:var(--color-text-sub);">IASP（国際疼痛学会）Neuropathic Pain Special Interest Group（NeuPSIG）ガイドライン</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- サイドバー -->
+      <aside class="detail-sidebar" aria-label="関連情報">
+
+        <!-- 重要度 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">重要度</p>
+          <div class="urgency-indicator urgency-medium">
+            <span class="urgency-dot"></span>
+            <span>専門医への受診が必要</span>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-2);">ペインクリニック・神経内科による適切な診断と治療が重要です</p>
+        </div>
+
+        <!-- 関連症状 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する症状</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/burning-pain/index.html">
+                <span>🔥</span>灼熱感・焼けるような痛み
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/allodynia/index.html">
+                <span>⚡</span>アロディニア（触覚過敏）
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/numbness/index.html">
+                <span>😣</span>しびれ・感覚異常
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../symptoms/sleep-disorder/index.html">
+                <span>😴</span>睡眠障害
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 関連治療法 -->
+        <div class="sidebar-widget">
+          <p class="sidebar-widget-title">関連する治療法</p>
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="../../treatments/spinal-cord-stimulation/index.html">
+                <span>⚡</span>脊髄刺激療法（SCS）
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="../../treatments/pain-management/index.html">
+                <span>💊</span>疼痛管理・鎮痛療法
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="sidebar-widget" style="background:var(--color-primary-light);border:1px solid var(--color-primary);">
+          <p class="sidebar-widget-title" style="color:var(--color-primary);">慢性疼痛にお悩みの方へ</p>
+          <p style="font-size:var(--text-sm);color:var(--color-text-sub);line-height:var(--leading-loose);margin-bottom:var(--space-3);">
+            神経障害性疼痛など難治性の痛みでお困りの方は、疼痛専門医への受診をご検討ください。Medecoでは専門医との連携をサポートしています。
+          </p>
+          <a href="mailto:info@medeco.io" class="btn btn-primary" style="width:100%;text-align:center;display:block;">
+            Medecoに相談する
+          </a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section style="padding:var(--space-12) 0;background:var(--color-bg-alt);">
+    <div class="container">
+      <div class="cta-section">
+        <p style="font-size:32px;margin-bottom:var(--space-3);" aria-hidden="true">👨‍⚕️</p>
+        <h2 class="cta-title">気になることは、まず医師に相談を</h2>
+        <p class="cta-description">
+          このページの情報はあくまでも参考です。<br>
+          実際の診断・治療の判断は、必ず医師にご相談ください。
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;">
+          <a href="../../diseases/index.html" class="btn btn-outline">他の疾患を調べる</a>
+          <a href="../../treatments/index.html" class="btn btn-primary">治療法を調べる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 医療免責事項 -->
+  <div class="disclaimer-bar" role="note" aria-label="医療免責事項">
+    <div class="container">
+      <p>このサイトは情報提供を目的としており、医療診断・治療の代替となるものではありません。症状がある場合は必ず医療機関を受診してください。</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- フッター -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Medeco <span>Navi</span></p>
+        <p>患者・ご家族のための疾患情報ポータル。</p>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);">運営：<a href="https://medeco.io/index.html" target="_blank" rel="noopener noreferrer" style="color:inherit;">株式会社Medeco</a></p>
+      </div>
+      <div>
+        <p class="footer-col-title">調べる</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">疾患から調べる</a></li>
+          <li><a href="../../symptoms/index.html">症状から調べる</a></li>
+          <li><a href="../../treatments/index.html">治療法から調べる</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">疾患カテゴリ</p>
+        <ul class="footer-links">
+          <li><a href="../../diseases/index.html">循環器系</a></li>
+          <li><a href="../../diseases/index.html">神経系</a></li>
+          <li><a href="../../diseases/index.html">運動器系</a></li>
+          <li><a href="../../diseases/index.html">がん領域</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">サポート</p>
+        <ul class="footer-links">
+          <li><a href="mailto:info@medeco.io">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 株式会社Medeco. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+        <a href="mailto:info@medeco.io">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top-btn" aria-label="ページトップへ戻る">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/accessibility.js"></script>
+
+<script>
+  // 目次アクティブ状態の制御
+  (function() {
+    const tocItems = document.querySelectorAll('.toc-item');
+    const sections = document.querySelectorAll('.detail-section, section[id]');
+    function updateToc() {
+      let current = '';
+      sections.forEach(function(section) {
+        const top = section.getBoundingClientRect().top;
+        if (top <= 120) current = section.id;
+      });
+      tocItems.forEach(function(item) {
+        const link = item.querySelector('a');
+        if (link && link.getAttribute('href') === '#' + current) {
+          item.classList.add('is-active');
+        } else {
+          item.classList.remove('is-active');
+        }
+      });
+    }
+    window.addEventListener('scroll', updateToc, { passive: true });
+    updateToc();
+
+    // スクロールトップボタン
+    const scrollBtn = document.getElementById('scroll-top-btn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        scrollBtn.classList.add('is-visible');
+      } else {
+        scrollBtn.classList.remove('is-visible');
+      }
+    }, { passive: true });
+    scrollBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+
+</body>
+</html>
