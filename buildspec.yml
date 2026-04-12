@@ -12,5 +12,7 @@ phases:
               --exclude ".github"
               --exclude ".gitignore"
               --exclude "README.md"
+              --exclude "server.js"
+              --exclude "buildspec.yml"
               --exact-timestamps
               --delete
